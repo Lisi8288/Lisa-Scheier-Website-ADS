@@ -378,7 +378,8 @@
     .form-check input[type="checkbox"]{width:1.1rem;height:1.1rem;flex-shrink:0;margin-top:.1rem;accent-color:var(--gold);cursor:pointer}
     .form-check label{font-size:.82rem;color:var(--text-muted);line-height:1.5}
     .form-check a{color:var(--gold);text-decoration:underline}
-    .btn-submit{width:100%;text-align:center;font-size:1rem;padding:1.1rem;cursor:pointer;background:linear-gradient(160deg,#3D2D00 0%,#5A4200 100%);color:var(--gold-light);border:1.5px solid var(--gold);border-radius:100px}
+    .btn-submit{width:100%;text-align:center;font-size:1rem;padding:1.1rem;cursor:pointer;background:linear-gradient(160deg,#3D2D00 0%,#5A4200 100%);color:var(--gold-light);border:1.5px solid var(--gold);border-radius:100px;box-shadow:0 4px 20px rgba(90,66,0,.4);transition:all .3s ease}
+    .btn-submit:hover{background:linear-gradient(160deg,#5A4200 0%,#7A5A00 100%);color:var(--gold-pale);box-shadow:0 8px 28px rgba(90,66,0,.55);transform:translateY(-2px)}
 
     /* ═══ SKILLS TICKER ═══ */
     @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
@@ -755,7 +756,8 @@
       <h2 class="section-headline center">Ich freue mich auf<br /><em>deine Nachricht.</em></h2>
       <p class="kontakt-sub center">Füll das Formular aus – ich melde mich innerhalb von 24 Stunden bei dir.</p>
       <p class="kontakt-direkt center">Oder direkt: <a href="tel:+4917655061457" style="color:var(--gold);font-weight:500">017655061457</a> &nbsp;·&nbsp; <a href="mailto:Info@lisascheier.de" style="color:var(--gold);font-weight:500">Info@lisascheier.de</a></p>
-      <form class="kontakt-form" name="kontakt" method="POST" action="#">
+      <form class="kontakt-form" name="kontakt" method="POST" data-netlify="true" action="/danke.html">
+        <input type="hidden" name="form-name" value="kontakt" />
         <div class="form-row">
           <div class="form-group"><label for="name">Dein Name</label><input type="text" id="name" name="name" placeholder="Lisa Musterfrau" required autocomplete="name" /></div>
           <div class="form-group"><label for="email">E-Mail-Adresse</label><input type="email" id="email" name="email" placeholder="hallo@example.de" required autocomplete="email" /></div>
