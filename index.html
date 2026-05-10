@@ -188,7 +188,7 @@
     .paket-card--basic{background:#CEAD88;border-color:rgba(201,168,76,.25)}
     .paket-card--basic .paket-name{color:#5A3C20}
     .paket-card--basic .preis-zahl{background:linear-gradient(180deg,#3D2210 0%,#5A3820 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .paket-card--basic .preis-einheit,.paket-card--basic .paket-setup-info{color:#6B4828}
+    .paket-card--basic .preis-ab,.paket-card--basic .preis-einheit,.paket-card--basic .paket-setup-info{color:#6B4828}
     .paket-card--basic .paket-features li{color:#4A3020}
     /* STANDARD – warmes Braun */
     .paket-card--featured{background:linear-gradient(160deg,#7A4E28 0%,#5A3618 100%);border-color:rgba(201,168,76,.6);transform:translateY(-8px);box-shadow:var(--shadow-lg),0 0 0 1px rgba(201,168,76,.15),0 0 40px rgba(201,168,76,.12)}
@@ -236,7 +236,8 @@
     .legal-note{font-size:.74rem;color:rgba(61,43,32,.48);line-height:1.65;max-width:720px;margin:4rem auto 0;padding:0 .5rem}
     .cta-ads-bg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--font-serif);font-size:clamp(14rem,38vw,32rem);font-weight:700;letter-spacing:-.04em;color:rgba(255,255,255,.08);pointer-events:none;z-index:0;line-height:1;user-select:none;white-space:nowrap}
     @keyframes adsLetterIn{from{opacity:0;transform:translateY(70px)}to{opacity:1;transform:translateY(0)}}
-    .ads-letter{display:inline-block;opacity:0;animation:adsLetterIn 2.2s cubic-bezier(.16,.84,.44,1) forwards}
+    .ads-letter{display:inline-block;opacity:0}
+    .ads-letter.animate{animation:adsLetterIn 2.2s cubic-bezier(.16,.84,.44,1) forwards}
     .zusatz-box{margin-top:2.5rem;background:linear-gradient(110deg,#7C5232 0%,#4E2E1A 50%,#261408 100%);border:1px solid rgba(201,168,76,.3);border-radius:var(--radius-lg);padding:3rem 3.5rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;box-shadow:0 8px 32px rgba(42,26,16,.22)}
     .zusatz-eyebrow{font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:1rem;display:block}
     .zusatz-box h3{font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;color:var(--champagne-pale);margin-bottom:.75rem}
@@ -650,7 +651,7 @@
       <div class="pakete-grid">
         <article class="paket-card paket-card--basic">
           <p class="paket-name">Basic</p>
-          <div class="paket-preis"><span class="preis-zahl">350</span><span class="preis-einheit">€ / Monat</span></div>
+          <div class="paket-preis"><span class="preis-ab">ab</span><span class="preis-zahl">350</span><span class="preis-einheit">€ / Monat</span></div>
           <p class="paket-setup-info">+ 555 € Setup (einmalig)</p>
           <div class="paket-divider"></div>
           <ul class="paket-features">
@@ -666,7 +667,7 @@
         <article class="paket-card paket-card--featured">
           <div class="paket-badge-tag">Empfohlen</div>
           <p class="paket-name">Standard</p>
-          <div class="paket-preis"><span class="preis-zahl">500</span><span class="preis-einheit">€ / Monat</span></div>
+          <div class="paket-preis"><span class="preis-ab">ab</span><span class="preis-zahl">500</span><span class="preis-einheit">€ / Monat</span></div>
           <p class="paket-setup-info">+ 888 € Setup (einmalig)</p>
           <div class="paket-divider"></div>
           <ul class="paket-features">
@@ -815,7 +816,7 @@
       <p class="section-eyebrow center">Schreib mir</p>
       <h2 class="center">Ich freue mich auf<br /><em>deine Nachricht.</em></h2>
       <p class="kontakt-sub center">Füll das Formular aus, ich melde mich persönlich bei dir.</p>
-      <form class="kontakt-form" novalidate>
+      <form class="kontakt-form" id="kontaktForm" novalidate>
         <div class="form-row">
           <div class="form-group"><label for="name">Dein Name</label><input type="text" id="name" name="name" placeholder="Lisa Musterfrau" required autocomplete="name" /></div>
           <div class="form-group"><label for="email">E-Mail-Adresse</label><input type="email" id="email" name="email" placeholder="hallo@example.de" required autocomplete="email" /></div>
@@ -967,6 +968,48 @@
         if(e.key === 'ArrowRight') { goTo(current + 1); resetAuto(); }
       });
     })();
+
+    // ADS LETTERS — erst einfliegen wenn Section sichtbar
+    const ctaBanner = document.querySelector('.cta-banner');
+    if(ctaBanner){
+      const adsObserver = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if(e.isIntersecting){
+            e.target.querySelectorAll('.ads-letter').forEach(el => el.classList.add('animate'));
+            adsObserver.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      adsObserver.observe(ctaBanner);
+    }
+
+    // KONTAKTFORMULAR → Web3Forms + Danke-Seite
+    const form = document.getElementById('kontaktForm');
+    if(form){
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        const name  = form.querySelector('#name');
+        const email = form.querySelector('#email');
+        const dsgvo = form.querySelector('#datenschutz');
+        // Validierung
+        let valid = true;
+        if(!name.value.trim())  { name.style.outline  = '2px solid #C9A84C'; valid = false; }
+        if(!email.value.trim()) { email.style.outline = '2px solid #C9A84C'; valid = false; }
+        if(!dsgvo.checked)      { dsgvo.nextElementSibling.style.color = '#C9A84C'; valid = false; }
+        if(!valid) return;
+        // Absenden an Web3Forms
+        const data = new FormData(form);
+        data.append('access_key', '467744a3-6a62-4bd1-8ea4-c70820f4a45d');
+        data.append('subject',    'Neue Anfrage über lisascheier.de');
+        try {
+          const res  = await fetch('https://api.web3forms.com/submit', { method:'POST', body:data });
+          const json = await res.json();
+          if(json.success) window.location.href = 'danke.html';
+        } catch(err) {
+          window.location.href = 'danke.html';
+        }
+      });
+    }
   </script>
 </body>
 </html>
