@@ -38,18 +38,18 @@
 
     /* Farben — HEX oder CSS-Werte */
     colors: {
-      background:   '#182E25',          // Hintergrund Banner
-      backgroundEnd:'#2E5443',          // Hintergrund Banner (Verlauf-Ende)
-      border:       'rgba(201,168,76,.4)', // Rahmen
-      text:         '#9BBCAD',          // Fließtext
-      textStrong:   '#F0E0A0',          // Fetter Text / Überschrift
+      background:   '#2A1A08',          // Hintergrund Banner
+      backgroundEnd:'#4A3018',          // Hintergrund Banner (Verlauf-Ende)
+      border:       'rgba(201,168,76,.35)', // Rahmen
+      text:         '#B89880',          // Fließtext
+      textStrong:   '#F0E8DA',          // Fetter Text / Überschrift
       link:         '#C9A84C',          // Links (Datenschutz, Impressum)
-      btnAcceptBg:  '#3D2D00',          // Akzeptieren-Button Hintergrund
-      btnAcceptBgEnd:'#5A4200',         // Akzeptieren-Button Hintergrund Ende
+      btnAcceptBg:  '#7A5500',          // Akzeptieren-Button Hintergrund
+      btnAcceptBgEnd:'#A87808',         // Akzeptieren-Button Hintergrund Ende
       btnAcceptBorder:'#C9A84C',        // Akzeptieren-Button Rahmen
-      btnAcceptText: '#E2C97E',         // Akzeptieren-Button Text
-      btnDeclineText:'#9BBCAD',         // Ablehnen-Button Text
-      btnDeclineBorder:'rgba(155,188,173,.3)', // Ablehnen-Button Rahmen
+      btnAcceptText: '#2A1808',         // Akzeptieren-Button Text
+      btnDeclineText:'#B89880',         // Ablehnen-Button Text
+      btnDeclineBorder:'rgba(184,152,128,.3)', // Ablehnen-Button Rahmen
     },
 
     /* Texte */
@@ -87,6 +87,19 @@
   var T                = CONFIG.text;
   var L                = CONFIG.links;
 
+  /* ─── Google Fonts: erst nach Consent laden (DSGVO) ────────── */
+  function loadFonts() {
+    if (document.getElementById('cc-fonts')) return;
+    var pc1 = document.createElement('link'); pc1.rel = 'preconnect'; pc1.href = 'https://fonts.googleapis.com';
+    var pc2 = document.createElement('link'); pc2.rel = 'preconnect'; pc2.href = 'https://fonts.gstatic.com'; pc2.crossOrigin = 'anonymous';
+    var lnk = document.createElement('link');
+    lnk.id = 'cc-fonts'; lnk.rel = 'stylesheet';
+    lnk.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap';
+    document.head.appendChild(pc1);
+    document.head.appendChild(pc2);
+    document.head.appendChild(lnk);
+  }
+
   /* ─── Consent Mode v2 Setup ───────────────────────────────── */
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
@@ -113,6 +126,7 @@
           ad_user_data:       'granted',
           ad_personalization: 'granted',
         });
+        loadFonts();
       }
       _consentAlreadySet = true;
     }
@@ -203,6 +217,7 @@
         ad_user_data:       'granted',
         ad_personalization: 'granted',
       });
+      loadFonts();
     }
     banner.classList.remove('cc-visible');
   }
