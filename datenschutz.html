@@ -7,77 +7,127 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    :root{--cream:#F7EDD8;--beige:#EFE0C4;--taupe:#C4A898;--brown:#3D2314;--brown-light:#5C3820;--forest:#182E25;--forest-mid:#2E5443;--sage-text:#9BBCAD;--sage-muted:#6E9A87;--gold:#C9A84C;--gold-light:#E2C97E;--gold-pale:#F0E0A0;--white:#FDFAF5;--text:#2E1A0E;--text-muted:#7A6050;--border:rgba(201,168,76,0.25);--font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'Jost',system-ui,sans-serif;--container:860px;--radius:4px;--radius-lg:12px;--transition:0.3s ease}
+    :root{
+      --ivory:#F8F2E8;--cream:#F0E8DA;--sand:#E8DDD0;
+      --champagne:#C9A84C;--champagne-light:#D4B85C;--champagne-pale:#E5D090;
+      --espresso:#1A1008;--espresso-mid:#2A1A08;--chocolate:#4A3018;--mocha:#6B5040;
+      --taupe:#6B5C50;--taupe-light:#9A8A7E;
+      --text:#4A3A2A;--text-muted:#8A7A6E;
+      --border:rgba(201,168,76,.2);
+      --font-serif:'Playfair Display','Cormorant Garamond',Georgia,serif;
+      --font-sans:'Jost',system-ui,sans-serif;
+      --container:1140px;--container-text:780px;--radius:4px;--radius-lg:16px;--transition:0.3s ease;
+    }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;font-size:16px}
-    body{font-family:var(--font-sans);color:var(--text);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased}
-    a{color:var(--gold);text-decoration:none;transition:color var(--transition)}
-    a:hover{color:var(--gold-light)}
+    html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+    body{font-family:var(--font-sans);color:var(--text);background:#EDE4D5;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+      background:
+        radial-gradient(ellipse 55% 45% at 95% 5%,rgba(255,252,244,.7) 0%,transparent 65%),
+        radial-gradient(ellipse 45% 40% at 5% 95%,rgba(255,250,240,.55) 0%,transparent 65%),
+        #EDE4D5}
+    img{max-width:100%;display:block}
+    a{color:var(--champagne);text-decoration:none;transition:color var(--transition)}
+    a:hover{color:var(--champagne-light)}
+    ul{list-style:none}
     .container{width:min(var(--container),100% - 3rem);margin-inline:auto}
+    .container-text{width:min(var(--container-text),100% - 3rem);margin-inline:auto}
+    h1,h2,h3{font-family:var(--font-serif);font-weight:400;line-height:1.2}
+    em{font-style:italic;background:linear-gradient(105deg,var(--champagne) 0%,var(--champagne-light) 50%,#A88A20 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
     /* NAV */
-    .site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 0;background:rgba(24,46,37,.82);backdrop-filter:blur(12px);transition:background var(--transition),box-shadow var(--transition),padding var(--transition)}
-    .site-header.scrolled{background:rgba(247,237,216,.97);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border);padding:.85rem 0}
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 0;transition:all var(--transition);background:#F5EEE4;box-shadow:0 1px 0 rgba(201,168,76,.15)}
+    .site-header.scrolled{background:rgba(248,242,232,.97);backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--border);padding:1rem 0}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:2rem}
-    .logo{font-family:var(--font-serif);font-size:2rem;font-weight:500;color:var(--cream);letter-spacing:.02em;white-space:nowrap;line-height:1;transition:color var(--transition)}
-    .nav-links{display:flex;align-items:center;gap:2.5rem;font-size:.88rem;font-weight:400;letter-spacing:.04em}
-    .nav-links a{color:rgba(253,250,245,.85)}
-    .nav-links a:hover{color:var(--gold)}
-    .btn-nav{padding:.55rem 1.4rem;border:1.5px solid var(--gold);border-radius:100px;color:var(--cream)!important;font-weight:500;transition:background var(--transition),color var(--transition)}
-    .btn-nav:hover{background:var(--gold);color:var(--brown)!important}
-    .site-header.scrolled .logo{color:var(--brown)}
-    .site-header.scrolled .nav-links a{color:var(--brown);font-weight:500}
-    .site-header.scrolled .nav-links a:hover{color:var(--gold)}
-    .site-header.scrolled .btn-nav{border-color:var(--gold);color:var(--brown)!important;background:transparent}
-    .site-header.scrolled .btn-nav:hover{background:var(--gold);color:var(--brown)!important}
-    @media(max-width:768px){.nav-links{display:none}}
+    .logo{display:flex;align-items:center;transition:opacity var(--transition)}
+    .logo:hover{opacity:.8}
+    .logo-img{height:80px;width:auto;mix-blend-mode:multiply;filter:contrast(1.15) saturate(1.1);display:block}
+    .nav-links{display:flex;align-items:center;gap:2.5rem;font-size:.85rem;font-weight:400;letter-spacing:.06em}
+    .nav-links a{color:rgba(61,43,32,.75);transition:color var(--transition)}
+    .nav-links a:hover{color:var(--champagne)}
+    .btn-nav{padding:.6rem 1.6rem;border:none;border-radius:100px;color:#2A1808!important;font-weight:500;background:linear-gradient(110deg,#A87808,#D4AE3A,#F5DC60,#C9A84C,#EAC840,#B89020,#D4AE3A);background-size:300% 100%;animation:goldFlow 10s ease-in-out infinite;box-shadow:0 3px 16px rgba(201,168,76,.4)}
+    .btn-nav:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(201,168,76,.55)}
+    @keyframes goldFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+    .burger span{display:block;width:24px;height:1.5px;background:#3D2B20;border-radius:2px}
+    @media(max-width:960px){
+      .nav-links{display:none}
+      .burger{display:flex}
+      .nav-links.open{display:flex;flex-direction:column;position:fixed;inset:0;background:var(--cream);z-index:200;align-items:center;justify-content:center;gap:2.5rem;font-size:1.5rem}
+      .nav-links.open a{color:#3D2B20}
+    }
 
     /* PAGE HERO */
-    .page-hero{background:linear-gradient(135deg,#182E25 0%,#2E5443 50%,#4A8065 100%);padding:8rem 0 4rem;text-align:center}
-    .page-eyebrow{font-family:var(--font-sans);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-text);margin-bottom:1rem;display:block}
-    .page-title{font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:var(--cream);line-height:1.15}
+    .page-hero{padding:10rem 0 5rem;text-align:center;background:linear-gradient(160deg,#4A3018 0%,#2A1A08 60%,#1A1008 100%);position:relative;overflow:hidden}
+    .page-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 110%,rgba(201,168,76,.12) 0%,transparent 70%);pointer-events:none}
+    .page-eyebrow{font-family:var(--font-sans);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:1rem;display:block}
+    .page-title{font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,4rem);font-weight:400;color:#F0E8DA;line-height:1.15}
 
     /* CONTENT */
-    .legal-content{padding:4rem 0 6rem}
-    .legal-block{margin-bottom:2.5rem}
-    .legal-block h2{font-family:var(--font-serif);font-size:1.4rem;font-weight:500;color:var(--brown);margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
-    .legal-block h3{font-family:var(--font-sans);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:1.5rem;margin-bottom:.5rem}
-    .legal-block p{font-size:.95rem;color:var(--text-muted);margin-bottom:.7rem}
-    .legal-block ul{margin:.5rem 0 .75rem 1.25rem;display:flex;flex-direction:column;gap:.4rem}
-    .legal-block ul li{font-size:.95rem;color:var(--text-muted)}
-    .legal-block ol{margin:.5rem 0 .75rem 1.5rem;display:flex;flex-direction:column;gap:.4rem}
+    .legal-content{padding:5rem 0 7rem}
+    .legal-block{margin-bottom:2.75rem;padding-bottom:2.75rem;border-bottom:1px solid rgba(201,168,76,.12)}
+    .legal-block:last-of-type{border-bottom:none}
+    .legal-block h2{font-family:var(--font-serif);font-size:1.5rem;font-weight:500;color:#3D2B20;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(201,168,76,.2)}
+    .legal-block h3{font-family:var(--font-sans);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--champagne);margin-top:1.5rem;margin-bottom:.5rem}
+    .legal-block p{font-size:.95rem;color:var(--text-muted);margin-bottom:.65rem;line-height:1.75}
+    .legal-block ul{margin:.5rem 0 .75rem 1.25rem;display:flex;flex-direction:column;gap:.5rem}
+    .legal-block ul li{font-size:.95rem;color:var(--text-muted);list-style:disc}
+    .legal-block ol{margin:.5rem 0 .75rem 1.5rem;display:flex;flex-direction:column;gap:.5rem}
     .legal-block ol li{font-size:.95rem;color:var(--text-muted)}
-    .legal-note{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem 2rem;margin-top:2rem}
-    .legal-note p{font-size:.88rem;color:var(--text-muted)}
+    .legal-block a{color:var(--champagne)}
+    .legal-block a:hover{color:var(--champagne-light)}
+    .legal-hint{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-radius:var(--radius-lg);padding:1.5rem 2rem;margin-top:2.5rem}
+    .legal-hint p{font-size:.9rem;color:var(--text-muted);margin:0}
+    .legal-hint a{color:var(--champagne)}
 
     /* FOOTER */
-    .site-footer{background:linear-gradient(160deg,var(--forest) 0%,#111E19 100%);padding:3rem 0 0}
-    .footer-inner{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(201,168,76,.15)}
-    .footer-logo{font-family:var(--font-serif);font-size:1.35rem;color:var(--cream);margin-bottom:.3rem}
-    .footer-tagline{font-size:.78rem;color:var(--sage-text);letter-spacing:.08em}
-    .footer-contact-info{margin-top:.5rem;font-size:.82rem;color:var(--sage-text)}
-    .footer-nav,.footer-legal{display:flex;gap:1.75rem}
-    .footer-nav a,.footer-legal a{font-size:.85rem;color:var(--sage-text);transition:color var(--transition)}
-    .footer-nav a:hover,.footer-legal a:hover{color:var(--gold)}
+    .site-footer{background:#1C1208;padding:3rem 0 0}
+    .footer-inner{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(201,168,76,.1)}
+    .footer-logo{margin-bottom:.5rem}
+    .footer-logo img{height:100px;width:auto;mix-blend-mode:screen;filter:contrast(1.2) saturate(1.1) brightness(1.8);opacity:.9}
+    .footer-tagline{font-size:.75rem;color:rgba(201,168,76,.45);letter-spacing:.1em}
+    .footer-nav,.footer-legal{display:flex;gap:2rem}
+    .footer-nav a,.footer-legal a{font-size:.83rem;color:rgba(201,168,76,.45);transition:color var(--transition)}
+    .footer-nav a:hover,.footer-legal a:hover{color:var(--champagne)}
     .footer-bottom{padding:1.25rem 0;text-align:center}
-    .footer-bottom p{font-size:.78rem;color:var(--sage-muted)}
-    @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:1.5rem;text-align:center}.footer-nav,.footer-legal{justify-content:center;flex-wrap:wrap}}
+    .footer-bottom p{font-size:.75rem;color:rgba(201,168,76,.25)}
+    @media(max-width:700px){
+      .footer-inner{grid-template-columns:1fr;gap:1.5rem;text-align:center}
+      .footer-nav,.footer-legal{justify-content:center;flex-wrap:wrap}
+    }
   </style>
 </head>
 <body>
 
+  <!-- Marmor-Hintergrund -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <filter id="mf" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.010 0.004" numOctaves="5" seed="8" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
+      <feComponentTransfer in="grey">
+        <feFuncR type="linear" slope="0.13" intercept="0.85"/>
+        <feFuncG type="linear" slope="0.10" intercept="0.79"/>
+        <feFuncB type="linear" slope="0.07" intercept="0.70"/>
+      </feComponentTransfer>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#mf)"/>
+  </svg>
+
   <header class="site-header" id="site-header">
-    <div class="container nav">
-      <a href="index.html" class="logo">Lisa Scheier</a>
-      <nav class="nav-links">
-        <a href="index.html#leistungen">Leistungen</a>
-        <a href="index.html#pakete">Pakete</a>
-        <a href="index.html#ueber-mich">Über mich</a>
-        <a href="index.html#kontakt" class="btn-nav">Erstgespräch</a>
-      </nav>
-    </div>
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="Bilder/Design ohne Titel (12).png" alt="Lisa Scheier Google Ads" class="logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="index.html#pakete">Pakete</a></li>
+        <li><a href="index.html#ueber-mich">Über mich</a></li>
+        <li><a href="index.html#kontakt" class="btn-nav">Erstgespräch</a></li>
+      </ul>
+      <button class="burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    </nav>
   </header>
 
   <section class="page-hero">
@@ -88,39 +138,35 @@
   </section>
 
   <main class="legal-content">
-    <div class="container">
+    <div class="container-text">
 
       <div class="legal-block">
         <h2>1. Einleitung</h2>
-        <p>Der Schutz Ihrer persönlichen Daten hat höchste Priorität. Diese Datenschutzerklärung erläutert die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten (im Folgenden „Daten" genannt) in Zusammenhang mit dem Onlineangebot. Dies umfasst die zugehörige Website, Funktionen und Inhalte sowie die externen Onlinepräsenzen, wie beispielsweise die Social-Media-Profile (im Folgenden zusammengefasst als „Onlineangebot"). Ihre personenbezogenen Daten werden vertraulich behandelt und es wird strikt den gesetzlichen Datenschutzvorschriften sowie den Bestimmungen dieser Datenschutzerklärung entsprochen.</p>
+        <p>Der Schutz Ihrer persönlichen Daten hat höchste Priorität. Diese Datenschutzerklärung erläutert die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten im Rahmen dieses Onlineangebots.</p>
 
         <h3>Allgemeine Hinweise</h3>
         <p>Diese Datenschutzerklärung gibt Ihnen einen umfassenden Überblick darüber, was mit Ihren personenbezogenen Daten geschieht, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Informationen, die dazu genutzt werden können, Sie persönlich zu identifizieren.</p>
 
         <h3>Verantwortliche Stelle</h3>
-        <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Die Kontaktdaten des Verantwortlichen finden Sie im Abschnitt „Verantwortlicher" in dieser Datenschutzerklärung.</p>
+        <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Die Kontaktdaten der Verantwortlichen finden Sie im Abschnitt „Verantwortlicher" in dieser Datenschutzerklärung.</p>
 
         <h3>Erhebung Ihrer Daten</h3>
-        <p>Personenbezogene Daten werden zum einen dadurch erhoben, dass Sie diese aktiv mitteilen, z.B. durch das Ausfüllen eines Kontaktformulars. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch die IT-Systeme des Verantwortlichen erfasst. Hierbei handelt es sich vor allem um technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
-
-        <h3>Verwendung Ihrer Daten</h3>
-        <p>Ein Teil der Daten wird erhoben, um die fehlerfreie Bereitstellung der Website sicherzustellen. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden, um das Angebot zu optimieren und auf Ihre Bedürfnisse anzupassen.</p>
+        <p>Personenbezogene Daten werden zum einen dadurch erhoben, dass Sie diese aktiv mitteilen, z.B. durch das Ausfüllen eines Kontaktformulars. Andere Daten werden automatisch beim Besuch der Website erfasst — hierbei handelt es sich vor allem um technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
 
         <h3>Widerruf von Einwilligungen zur Datenverarbeitung</h3>
-        <p>Bestimmte Datenverarbeitungen können nur mit Ihrer ausdrücklichen Einwilligung erfolgen. Diese Einwilligung kann jederzeit widerrufen werden. Die Rechtmäßigkeit der bis zum Zeitpunkt des Widerrufs erfolgten Datenverarbeitung bleibt durch den Widerruf unberührt.</p>
+        <p>Bestimmte Datenverarbeitungen können nur mit Ihrer ausdrücklichen Einwilligung erfolgen. Diese Einwilligung kann jederzeit widerrufen werden. Die Rechtmäßigkeit der bis zum Zeitpunkt des Widerrufs erfolgten Datenverarbeitung bleibt davon unberührt.</p>
 
         <h3>Widerspruchsrecht (Art. 21 DSGVO)</h3>
-        <p>Erfolgt die Verarbeitung Ihrer personenbezogenen Daten auf der Basis von Art. 6 Abs. 1 lit. e oder f DSGVO, haben Sie das Recht, jederzeit gegen diese Verarbeitung Widerspruch einzulegen, sofern Sie Gründe haben, die sich aus Ihrer besonderen Situation ergeben. Bei einem Widerspruch wird der Verantwortliche Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, es können zwingende schutzwürdige Gründe nachgewiesen werden, die Ihre Interessen, Rechte und Freiheiten überwiegen.</p>
-        <p>Werden Ihre personenbezogenen Daten für Zwecke der Direktwerbung genutzt, steht Ihnen das Recht zu, jederzeit Widerspruch gegen diese Verarbeitung einzulegen (Art. 21 Abs. 2 DSGVO).</p>
+        <p>Erfolgt die Verarbeitung Ihrer personenbezogenen Daten auf der Basis von Art. 6 Abs. 1 lit. e oder f DSGVO, haben Sie das Recht, jederzeit gegen diese Verarbeitung Widerspruch einzulegen.</p>
 
         <h3>Rechte gemäß DSGVO</h3>
-        <p>Sie haben das Recht, bei Verstößen gegen die DSGVO eine Beschwerde bei einer zuständigen Aufsichtsbehörde einzureichen. Jede betroffene Person hat das Recht, unentgeltlich Auskunft über ihre gespeicherten personenbezogenen Daten, deren Herkunft, Empfänger sowie den Zweck der Datenverarbeitung zu erhalten. Darüber hinaus besteht ein Recht auf Berichtigung oder Löschung dieser Daten, sofern gesetzliche Bestimmungen dies zulassen.</p>
+        <p>Sie haben das Recht, bei Verstößen gegen die DSGVO eine Beschwerde bei einer zuständigen Aufsichtsbehörde einzureichen. Jede betroffene Person hat das Recht auf unentgeltliche Auskunft über ihre gespeicherten personenbezogenen Daten, deren Herkunft, Empfänger sowie den Zweck der Datenverarbeitung.</p>
       </div>
 
       <div class="legal-block">
         <h2>2. Verantwortlicher</h2>
-        <p>Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der DSGVO ist:</p>
-        <p style="margin-top:.75rem;line-height:2;">
+        <p>Verantwortliche für die Datenverarbeitung auf dieser Website im Sinne der DSGVO ist:</p>
+        <p style="margin-top:.75rem;line-height:2.2;">
           Lisa Scheier<br />
           Marsstraße 2, 75417 Mühlacker<br />
           Website: <a href="https://www.lisascheier.de" target="_blank" rel="noopener">www.lisascheier.de</a><br />
@@ -164,17 +210,17 @@
 
       <div class="legal-block">
         <h2>7. Datenweitergabe an unsichere Drittstaaten</h2>
-        <p>Falls auf dieser Website Tools von Unternehmen eingesetzt werden, die ihren Sitz in datenschutzrechtlich unsicheren Drittstaaten haben, können Ihre personenbezogenen Daten in diese Staaten übertragen werden. Für die USA als unsicheren Drittstaat ist eine Datenübertragung nur dann zulässig, wenn der Empfänger eine Zertifizierung unter dem „EU-US Data Privacy Framework" (DPF) besitzt. Ausführliche Informationen finden Sie in den jeweiligen Abschnitten dieser Datenschutzerklärung.</p>
+        <p>Falls auf dieser Website Tools von Unternehmen eingesetzt werden, die ihren Sitz in datenschutzrechtlich unsicheren Drittstaaten haben, können Ihre personenbezogenen Daten in diese Staaten übertragen werden. Für die USA ist eine Datenübertragung nur dann zulässig, wenn der Empfänger eine Zertifizierung unter dem „EU-US Data Privacy Framework" (DPF) besitzt.</p>
       </div>
 
       <div class="legal-block">
         <h2>8. Speicherdauer</h2>
-        <p>Personenbezogene Daten werden beim Verantwortlichen gespeichert, bis der Zweck für die Datenverarbeitung entfällt. Bei einem berechtigten Löschersuchen oder dem Widerruf einer Einwilligung werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten (z.B. steuer- oder handelsrechtliche Fristen) entgegenstehen.</p>
+        <p>Personenbezogene Daten werden beim Verantwortlichen gespeichert, bis der Zweck für die Datenverarbeitung entfällt. Bei einem berechtigten Löschersuchen oder dem Widerruf einer Einwilligung werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
       </div>
 
       <div class="legal-block">
         <h2>9. Sicherheitsmaßnahmen und Datenminimierung</h2>
-        <p>Es werden umfassende technische und organisatorische Maßnahmen ergriffen, um Ihre personenbezogenen Daten wirksam zu schützen. Es werden ausschließlich die für den jeweiligen Zweck unbedingt erforderlichen Daten erhoben. Die Sicherheitsmaßnahmen werden kontinuierlich an den Stand der Technik angepasst.</p>
+        <p>Es werden umfassende technische und organisatorische Maßnahmen ergriffen, um Ihre personenbezogenen Daten wirksam zu schützen. Es werden ausschließlich die für den jeweiligen Zweck unbedingt erforderlichen Daten erhoben.</p>
       </div>
 
       <div class="legal-block">
@@ -201,8 +247,8 @@
       <div class="legal-block">
         <h2>12. Cookies</h2>
         <p>Diese Website verwendet Cookies — kleine Dateien, die Ihr Browser auf Ihrem Endgerät speichert. Cookies richten keinen Schaden an und enthalten keine Schadsoftware.</p>
-        <p>Es werden Session-Cookies (werden nach Sitzungsende gelöscht), temporäre Cookies (für eine festgelegte Zeit) sowie Analyse-Cookies eingesetzt. Rechtsgrundlage ist Art. 6 Abs. 1 S. 1 lit. f DSGVO.</p>
-        <p>Sie können Ihren Browser so konfigurieren, dass keine Cookies gespeichert werden. Die vollständige Deaktivierung kann jedoch dazu führen, dass Sie nicht alle Funktionen der Website nutzen können.</p>
+        <p>Es werden Session-Cookies (werden nach Sitzungsende gelöscht), temporäre Cookies sowie Analyse-Cookies eingesetzt. Rechtsgrundlage ist Art. 6 Abs. 1 S. 1 lit. f DSGVO.</p>
+        <p>Sie können Ihren Browser so konfigurieren, dass keine Cookies gespeichert werden. Die vollständige Deaktivierung kann jedoch dazu führen, dass nicht alle Funktionen der Website genutzt werden können.</p>
       </div>
 
       <div class="legal-block">
@@ -212,22 +258,22 @@
 
       <div class="legal-block">
         <h2>14. Anfragen per E-Mail oder Telefon</h2>
-        <p>Anfragen per E-Mail oder Telefon werden vom Verantwortlichen ausschließlich zum Zwecke der Bearbeitung verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bzw. Art. 6 Abs. 1 lit. f DSGVO.</p>
+        <p>Anfragen per E-Mail oder Telefon werden ausschließlich zum Zwecke der Bearbeitung verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bzw. Art. 6 Abs. 1 lit. f DSGVO.</p>
       </div>
 
       <div class="legal-block">
         <h2>15. Untersagung der Zusendung von Werbe-E-Mails</h2>
-        <p>Die Nutzung der im Impressum veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit untersagt. Der Betreiber behält sich rechtliche Schritte bei Verstößen vor, insbesondere bei der unverlangten Zusendung von Spam-E-Mails.</p>
+        <p>Die Nutzung der im Impressum veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit untersagt. Bei Verstößen behalten wir uns rechtliche Schritte vor.</p>
       </div>
 
       <div class="legal-block">
         <h2>16. Analyse- und Tracking-Tools</h2>
 
         <h3>Google Ads Tracking</h3>
-        <p>Es wird Google Ads Tracking verwendet (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Google Ads Tracking setzt Cookies ein, um die Effektivität von Werbekampagnen zu messen. Die Daten werden an Google-Server in den USA übertragen. Google ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+        <p>Es wird Google Ads Tracking verwendet (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Google Ads Tracking setzt Cookies ein, um die Effektivität von Werbekampagnen zu messen. Google ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
 
         <h3>Google Ads Remarketing</h3>
-        <p>Es wird Google Ads Remarketing verwendet (Google Ireland Limited), um gezielte Werbung an Nutzer auszuspielen, die zuvor diese Website besucht haben. Google ist unter dem EU-US DPF zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+        <p>Es wird Google Ads Remarketing verwendet (Google Ireland Limited), um gezielte Werbung an Nutzerinnen und Nutzer auszuspielen, die zuvor diese Website besucht haben. Google ist unter dem EU-US DPF zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
 
         <h3>Google Analytics</h3>
         <p>Es wird Google Analytics verwendet (Google Ireland Limited). Google Analytics setzt Cookies ein, um eine Analyse der Benutzung der Website zu ermöglichen. Die IP-Anonymisierung ist aktiviert. Google ist unter dem EU-US DPF zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
@@ -244,7 +290,7 @@
 
       <div class="legal-block">
         <h2>17. Formular-Tools</h2>
-        <p>Die Nutzung von Formular-Tools erfolgt auf Grundlage des berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO, um eine effiziente Datenerfassung und -verwaltung zu gewährleisten. Einwilligungen sind jederzeit mit Wirkung für die Zukunft widerrufbar.</p>
+        <p>Die Nutzung von Formular-Tools erfolgt auf Grundlage des berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO. Einwilligungen sind jederzeit mit Wirkung für die Zukunft widerrufbar.</p>
       </div>
 
       <div class="legal-block">
@@ -279,7 +325,7 @@
         <p style="margin-top:.75rem;">Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info@lisascheier.de">info@lisascheier.de</a></p>
       </div>
 
-      <div class="legal-note">
+      <div class="legal-hint">
         <p>Bei Fragen zum Datenschutz erreichst du mich jederzeit per E-Mail: <a href="mailto:info@lisascheier.de">info@lisascheier.de</a> oder telefonisch unter <a href="tel:+4917655061457">017655061457</a>.</p>
       </div>
 
@@ -288,22 +334,35 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <p class="footer-logo">Lisa Scheier</p>
-        <p class="footer-tagline">Google Ads &amp; Online Sichtbarkeit für lokale Unternehmen</p>
-        <p class="footer-contact-info"><a href="tel:+4917655061457" style="color:var(--taupe)">017655061457</a> &nbsp;·&nbsp; <a href="mailto:info@lisascheier.de" style="color:var(--taupe)">info@lisascheier.de</a></p>
+      <div>
+        <div class="footer-logo">
+          <img src="Bilder/Design ohne Titel (12).png" alt="Lisa Scheier Google Ads" />
+        </div>
+        <div class="footer-tagline">Google Ads Expertin für lokale Unternehmen</div>
       </div>
-      <nav class="footer-nav"><a href="index.html#leistungen">Leistungen</a><a href="index.html#pakete">Pakete</a><a href="index.html#ueber-mich">Über mich</a><a href="index.html#kontakt">Kontakt</a></nav>
-      <nav class="footer-legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
+      <nav class="footer-nav">
+        <a href="index.html#leistungen">Leistungen</a>
+        <a href="index.html#pakete">Pakete</a>
+        <a href="index.html#ueber-mich">Über mich</a>
+        <a href="index.html#kontakt">Kontakt</a>
+      </nav>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>© 2025 Lisa Scheier · Google Ads Expertin · Alle Rechte vorbehalten</p></div></div>
+    <div class="footer-bottom">
+      <p>© 2026 Lisa Scheier. Alle Rechte vorbehalten.</p>
+    </div>
   </footer>
 
   <script>
     const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
   </script>
 
 </body>

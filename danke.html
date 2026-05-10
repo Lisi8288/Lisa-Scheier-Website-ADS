@@ -7,25 +7,66 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    :root{--cream:#F7EDD8;--forest:#182E25;--forest-mid:#2E5443;--gold:#C9A84C;--gold-light:#E2C97E;--white:#FDFAF5;--text:#2E1A0E;--text-muted:#7A6050;--font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'Jost',system-ui,sans-serif}
+    :root{
+      --champagne:#C9A84C;--champagne-light:#D4B85C;
+      --espresso:#1A1008;--chocolate:#4A3018;
+      --font-serif:'Playfair Display','Cormorant Garamond',Georgia,serif;
+      --font-sans:'Jost',system-ui,sans-serif;
+    }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:var(--font-sans);background:linear-gradient(135deg,var(--forest) 0%,var(--forest-mid) 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
-    .card{background:rgba(247,237,216,.06);border:1.5px solid rgba(201,168,76,.3);border-radius:16px;padding:4rem 3rem;max-width:560px;width:100%}
-    .icon{font-size:3rem;margin-bottom:1.5rem}
-    h1{font-family:var(--font-serif);font-size:clamp(2rem,5vw,3rem);font-weight:300;color:var(--cream);margin-bottom:1rem}
-    p{font-size:1rem;color:#9BBCAD;line-height:1.8;margin-bottom:2rem}
-    a{display:inline-block;padding:1rem 2.25rem;background:linear-gradient(160deg,#3D2D00 0%,#5A4200 100%);color:var(--gold-light);font-family:var(--font-sans);font-size:.9rem;font-weight:500;letter-spacing:.06em;border-radius:100px;border:1.5px solid var(--gold);text-decoration:none;transition:all .3s;box-shadow:0 4px 20px rgba(90,66,0,.4)}
-    a:hover{background:linear-gradient(160deg,#5A4200 0%,#7A5A00 100%);color:#F0E0A0;box-shadow:0 8px 28px rgba(90,66,0,.55)}
+    html{font-size:16px}
+    body{font-family:var(--font-sans);background:#EDE4D5;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;-webkit-font-smoothing:antialiased}
+    body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+      background:
+        radial-gradient(ellipse 55% 45% at 95% 5%,rgba(255,252,244,.7) 0%,transparent 65%),
+        radial-gradient(ellipse 45% 40% at 5% 95%,rgba(255,250,240,.55) 0%,transparent 65%),
+        #EDE4D5}
+
+    /* Marmor-Overlay */
+    .marble{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+    .card{position:relative;z-index:1;background:linear-gradient(110deg,rgba(208,190,176,.55) 0%,rgba(184,152,128,.45) 50%,rgba(154,126,106,.4) 100%);border:1px solid rgba(201,168,76,.3);border-radius:20px;padding:4rem 3.5rem;max-width:580px;width:100%;box-shadow:0 24px 80px rgba(42,26,16,.15);backdrop-filter:blur(8px)}
+
+    .icon{font-size:2.2rem;color:var(--champagne);margin-bottom:1.75rem;display:block;filter:drop-shadow(0 0 12px rgba(201,168,76,.45))}
+
+    h1{font-family:var(--font-serif);font-size:clamp(2rem,5vw,3rem);font-weight:400;color:#2A1608;line-height:1.2;margin-bottom:1.25rem}
+
+    h1 em{font-style:italic;background:linear-gradient(105deg,var(--champagne) 0%,var(--champagne-light) 50%,#A88A20 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+    p{font-size:1rem;color:#6B4828;line-height:1.8;margin-bottom:2.5rem;max-width:420px;margin-inline:auto}
+
+    .btn{display:inline-block;padding:1rem 2.5rem;background:linear-gradient(110deg,#A87808,#D4AE3A,#F5DC60,#C9A84C,#EAC840,#B89020,#D4AE3A);background-size:300% 100%;animation:goldFlow 10s ease-in-out infinite;color:#2A1808;font-family:var(--font-sans);font-size:.9rem;font-weight:500;letter-spacing:.08em;border-radius:100px;text-decoration:none;transition:box-shadow .3s,transform .3s;box-shadow:0 4px 28px rgba(201,168,76,.5)}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(201,168,76,.65)}
+    @keyframes goldFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+    .sub{display:block;margin-top:1.5rem;font-size:.78rem;color:rgba(107,72,40,.5);letter-spacing:.06em}
   </style>
 </head>
 <body>
+
+  <!-- Marmor-Hintergrund -->
+  <svg class="marble" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <filter id="mf" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.010 0.004" numOctaves="5" seed="8" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
+      <feComponentTransfer in="grey">
+        <feFuncR type="linear" slope="0.13" intercept="0.85"/>
+        <feFuncG type="linear" slope="0.10" intercept="0.79"/>
+        <feFuncB type="linear" slope="0.07" intercept="0.70"/>
+      </feComponentTransfer>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#mf)"/>
+  </svg>
+
   <div class="card">
-    <div class="icon">✦</div>
-    <h1>Danke für deine Nachricht!</h1>
+    <span class="icon">✦</span>
+    <h1>Danke für deine<br /><em>Nachricht!</em></h1>
     <p>Ich habe deine Anfrage erhalten und melde mich werktags innerhalb von 24 Stunden bei dir — ich freue mich darauf, dich kennenzulernen.</p>
-    <a href="index.html">Zurück zur Startseite</a>
+    <a href="index.html" class="btn">Zurück zur Startseite →</a>
+    <span class="sub">Bis gleich · Lisa</span>
   </div>
+
 </body>
 </html>
