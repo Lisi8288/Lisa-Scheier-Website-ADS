@@ -1137,3 +1137,16 @@ a.testi__shot:hover .testi__screen img{transition-duration:12s}
   .page-hero .lead{order:5}.page-hero .btns{order:6}
 }
 @media (max-width:860px){.page-hero .kicker,.page-hero .crumbs{align-self:flex-start}}
+
+/* Mein Ansatz: am Handy steht die Erklärung direkt unter jedem Glaskästchen */
+.flow__step{display:none}
+@media (max-width:860px){
+  .flow__step{display:block;margin:clamp(-6px,-1vw,0px) 4px 0;padding:0 4px}
+  .flow__step .n{font-family:var(--serif);font-size:1.5rem;color:#c99a5b;display:flex;align-items:center;gap:14px}
+  .flow__step .n::after{content:"";flex:1;height:1px;background:rgba(201,154,91,.55)}
+  .flow__step h3{margin:10px 0 6px;font-family:var(--sans);font-weight:400;font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+  .flow__step p{margin:0;font-size:1rem;line-height:1.55;color:#d9a86a}
+  .approach__steps{display:none !important}
+  /* Gesehen werden: halbes Gesicht sichtbar lassen */
+  .problem__figure--photo img{transform:translateX(-14%) !important}
+}
