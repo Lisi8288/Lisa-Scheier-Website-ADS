@@ -1,0 +1,66 @@
+/* Nur Variante A: dunkle Sektionen in warmem Schwarz statt Espresso */
+:root{--bg:#15100d;--bg-2:#1a1310;--bg-3:#201814}
+body{background:#15100d}
+.hero{background:radial-gradient(ellipse 55% 70% at 60% 45%,rgba(120,70,42,.16),transparent 70%),#15100d}
+.hero__s,.hero__chade{}
+.approach{background:linear-gradient(118deg,transparent 58%,rgba(190,140,95,.08) 70%,transparent 82%),radial-gradient(ellipse 45% 70% at 92% 40%,rgba(110,64,40,.28),transparent 70%),linear-gradient(180deg,#15100d 0%,#1a1310 60%,#15100d 100%)}
+.section--tint,#leistungen,#ueber-mich,#ergebnisse{background:radial-gradient(ellipse 60% 50% at 12% 30%,rgba(130,72,46,.12),transparent 70%),linear-gradient(180deg,#1a1310,#15100d)}
+.problem{background:radial-gradient(ellipse 45% 70% at 82% 45%,rgba(196,138,88,.16),transparent 70%),linear-gradient(90deg,#0f0b09 0%,#120d0b 28%,#1c140f 52%,#291d16 78%,#33251c 100%)}
+.contact{background:radial-gradient(ellipse 50% 60% at 70% 45%,rgba(130,72,46,.18),transparent 72%),linear-gradient(180deg,#15100d 0%,#1a1310 50%,#15100d 100%)}
+.contact .shead,.approach .stitle,#ueber-mich .stitle,#ergebnisse .stitle,#leistungen .stitle,.problem .stitle{--bg:#15100d}
+.footer{background:#120d0b}
+main:has(.page-hero) > section:not(.page-hero),.page-hero::before{background:radial-gradient(ellipse 60% 50% at 12% 30%,rgba(130,72,46,.12),transparent 70%),linear-gradient(180deg,#1a1310,#15100d)}
+
+/* goldener Lichtschimmer */
+:root{--bg:#110d0b}
+.hero,.problem,#leistungen,#ergebnisse,.contact,main:has(.page-hero) > section:nth-of-type(odd),.page-hero::before{background:linear-gradient(112deg,transparent 30%,rgba(232,184,96,.075) 44%,rgba(232,184,96,.02) 53%,transparent 62%),radial-gradient(ellipse 45% 60% at 82% 18%,rgba(218,164,74,.16),transparent 70%),radial-gradient(ellipse 40% 50% at 10% 90%,rgba(200,140,60,.06),transparent 70%),#110d0b}
+.approach,#ueber-mich,main:has(.page-hero) > section:nth-of-type(even){background:linear-gradient(248deg,transparent 30%,rgba(232,184,96,.07) 44%,rgba(232,184,96,.02) 53%,transparent 62%),radial-gradient(ellipse 45% 60% at 16% 22%,rgba(218,164,74,.15),transparent 70%),radial-gradient(ellipse 40% 50% at 92% 88%,rgba(200,140,60,.06),transparent 70%),#0e0b09}
+
+/* noch dunkler – fast Schwarz wie im Original-Hero */
+:root{--bg:#090807;--warm-schwarz:#090807;--warm-braun:#090807}
+body{background:#090807}
+.hero,.problem,#leistungen,#ergebnisse,.contact,main:has(.page-hero) > section:nth-of-type(odd),.page-hero::before{background:linear-gradient(112deg,transparent 32%,rgba(232,184,96,.045) 45%,rgba(232,184,96,.012) 53%,transparent 62%),radial-gradient(ellipse 45% 60% at 82% 18%,rgba(214,150,70,.09),transparent 70%),#090807}
+.approach,#ueber-mich,main:has(.page-hero) > section:nth-of-type(even){background:linear-gradient(248deg,transparent 32%,rgba(232,184,96,.045) 45%,rgba(232,184,96,.012) 53%,transparent 62%),radial-gradient(ellipse 45% 60% at 16% 22%,rgba(214,150,70,.09),transparent 70%),#090807}
+.footer{background:#070605}
+.hero__s,.hero__chade{}
+.hero{background:radial-gradient(ellipse 30% 45% at 62% 50%,rgba(150,80,30,.10),transparent 70%),#0a0908 !important}
+
+/* Variante A: "Über mich" auf Taupe-Grund (wie die Taupe-Glas-Karten) */
+#ueber-mich{background:
+  radial-gradient(ellipse 55% 60% at 18% 30%,rgba(255,236,230,.10),transparent 70%),
+  linear-gradient(160deg,#6f4f4c 0%,#5f4240 50%,#4f3634 100%) !important;
+  border-top:1px solid rgba(255,220,205,.18);border-bottom:1px solid rgba(255,220,205,.18)}
+#ueber-mich .stitle{--bg:#5f4240}
+#ueber-mich p,#ueber-mich .facts p{color:#efe3d7}
+#ueber-mich .about__belief{border-left-color:#f0d3a3}
+#ueber-mich .facts{border-top-color:rgba(255,230,215,.25)}
+
+/* Variante A: "Über mich" im Taupe-Ton der bisherigen FAQ-Sektion */
+#ueber-mich{background:
+  radial-gradient(50% 60% at 50% 30%,rgba(170,116,116,.4),transparent 72%),
+  radial-gradient(120% 100%,transparent 45%,rgba(30,14,16,.45) 100%),
+  linear-gradient(#3f2b2c 0%,#4d3536 50%,#3c292a 100%) !important}
+#ueber-mich .stitle{--bg:#4d3536}
+
+/* Variante A: FAQ schwarz, Fragen schlicht mit feinen Taupe-Linien; die offene Frage bekommt einen zarten Taupe-Schimmer */
+#faq{background:linear-gradient(112deg,transparent 32%,rgba(232,184,96,.043) 45%,rgba(232,184,96,.01) 53%,transparent 62%),radial-gradient(45% 60% at 82% 18%,rgba(214,150,70,.09),transparent 70%),#090807 !important}
+#faq .stitle{--bg:#090807}
+#faq .faq__list{border-top:1px solid rgba(190,150,145,.35)}
+#faq .faq__list details{border-bottom:1px solid rgba(190,150,145,.35) !important;transition:background .5s}
+#faq .faq__list details[open]{background:linear-gradient(90deg,transparent 0%,rgba(138,94,92,.18) 20%,rgba(138,94,92,.18) 80%,transparent 100%)}
+#faq summary i{border-color:rgba(200,160,150,.55)}
+
+/* Variante A: Laufband in Taupe-Glas statt Braun */
+.ticker{background:
+  radial-gradient(14% 120% at 43% 50%,rgba(255,225,215,.16),transparent 70%),
+  linear-gradient(135deg,rgba(255,236,230,.08) 0%,transparent 40%),
+  linear-gradient(90deg,#4a3334 0%,#5a3f3f 50%,#4a3334 100%) !important;
+  border-top:1px solid rgba(255,228,220,.14) !important;border-bottom:1px solid rgba(214,170,160,.55) !important}
+.ticker,.ticker *{color:#efe3d7}
+.ticker svg{color:#e0bfa6;stroke:currentColor}
+
+/* Variante A: Laufband warmes Schwarz mit Goldlinien (statt Taupe) */
+.ticker{background:radial-gradient(14% 120% at 43% 50%,rgba(214,160,90,.10),transparent 70%),linear-gradient(180deg,rgba(255,240,220,.035) 0%,transparent 50%),linear-gradient(90deg,#120e0c 0%,#17120f 50%,#120e0c 100%) !important;border-top:1px solid rgba(201,154,91,.35) !important;border-bottom:1px solid rgba(201,154,91,.75) !important}
+.ticker,.ticker *{color:#e6d6c1}
+.ticker svg{color:#c99a5b;stroke:#c99a5b}
+.ticker__dot{color:rgba(201,154,91,.6)}

@@ -1,70 +1,120 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Danke! | Lisa Scheier – Google Ads Expertin</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <!-- Google Fonts werden erst nach Cookie-Zustimmung geladen (DSGVO) -->
-  <style>
-    :root{
-      --champagne:#C9A84C;--champagne-light:#D4B85C;
-      --espresso:#1A1008;--chocolate:#4A3018;
-      --font-serif:'Playfair Display','Cormorant Garamond',Georgia,serif;
-      --font-sans:'Jost',system-ui,sans-serif;
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{font-size:16px}
-    body{font-family:var(--font-sans);background:#EDE4D5;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;-webkit-font-smoothing:antialiased}
-    body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-      background:
-        radial-gradient(ellipse 55% 45% at 95% 5%,rgba(255,252,244,.7) 0%,transparent 65%),
-        radial-gradient(ellipse 45% 40% at 5% 95%,rgba(255,250,240,.55) 0%,transparent 65%),
-        #EDE4D5}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Danke für deine Anfrage - Lisa Scheier</title>
+<meta name="description" content="Deine Anfrage ist angekommen.">
+<link rel="canonical" href="https://www.lisascheier.de/danke.html">
+<meta name="theme-color" content="#0b0908">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Lisa Scheier">
+<meta property="og:title" content="Danke für deine Anfrage - Lisa Scheier">
+<meta property="og:description" content="Deine Anfrage ist angekommen.">
+<meta property="og:url" content="https://www.lisascheier.de/danke.html">
+<meta property="og:image" content="https://www.lisascheier.de/assets/img/lisa-about.webp?v=1790757056">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="preload" href="assets/fonts/cormorant-garamond-v21-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-v20-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/allura.woff2" as="font" type="font/woff2" crossorigin>
 
-    /* Marmor-Overlay */
-    .marble{position:fixed;inset:0;z-index:0;pointer-events:none}
-
-    .card{position:relative;z-index:1;max-width:560px;width:100%}
-
-    .icon{font-size:2.2rem;color:var(--champagne);margin-bottom:1.75rem;display:block;filter:drop-shadow(0 0 12px rgba(201,168,76,.45))}
-
-    h1{font-family:var(--font-serif);font-size:clamp(2rem,5vw,3rem);font-weight:400;color:#2A1608;line-height:1.2;margin-bottom:1.25rem}
-
-    h1 em{font-style:italic;background:linear-gradient(105deg,var(--champagne) 0%,var(--champagne-light) 50%,#A88A20 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-
-    p{font-size:1rem;color:#6B4828;line-height:1.8;margin-bottom:2.5rem;max-width:420px;margin-inline:auto}
-
-    .btn{display:inline-block;padding:1rem 2.5rem;background:linear-gradient(110deg,#A87808,#D4AE3A,#F5DC60,#C9A84C,#EAC840,#B89020,#D4AE3A);background-size:300% 100%;animation:goldFlow 10s ease-in-out infinite;color:#2A1808;font-family:var(--font-sans);font-size:.9rem;font-weight:500;letter-spacing:.08em;border-radius:100px;text-decoration:none;transition:box-shadow .3s,transform .3s;box-shadow:0 4px 28px rgba(201,168,76,.5)}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(201,168,76,.65)}
-    @keyframes goldFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-
-    .sub{display:block;margin-top:1.5rem;font-size:.78rem;color:rgba(107,72,40,.5);letter-spacing:.06em}
-  </style>
+<link rel="stylesheet" href="assets/css/site.css?v=1790757056">
+<link rel="stylesheet" href="assets/css/variante-a.css?v=1790757056">
+<link rel="stylesheet" href="assets/css/variante-a-schwarz.css?v=1790757056">
+<meta name="robots" content="noindex,nofollow">
 </head>
 <body>
-
-  <!-- Marmor-Hintergrund -->
-  <svg class="marble" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-    <filter id="mf" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.010 0.004" numOctaves="5" seed="8" result="noise"/>
-      <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
-      <feComponentTransfer in="grey">
-        <feFuncR type="linear" slope="0.13" intercept="0.85"/>
-        <feFuncG type="linear" slope="0.10" intercept="0.79"/>
-        <feFuncB type="linear" slope="0.07" intercept="0.70"/>
-      </feComponentTransfer>
-    </filter>
-    <rect width="100%" height="100%" filter="url(#mf)"/>
-  </svg>
-
-  <div class="card">
-    <span class="icon">✦</span>
-    <h1>Danke für deine<br /><em>Nachricht!</em></h1>
-    <p>Ich habe deine Anfrage erhalten und melde mich werktags innerhalb von 24 Stunden bei dir — ich freue mich darauf, dich kennenzulernen.</p>
-    <a href="index.html" class="btn">Zurück zur Startseite →</a>
-    <span class="sub">Bis gleich · Lisa</span>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="index.html" aria-label="Lisa Scheier - Startseite">
+      <img src="assets/img/logo.png" alt="" width="46" height="46"><span>Lisa Scheier</span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <ul class="nav__list">
+        <li class="has-drop">
+          <button class="nav__link" aria-expanded="false" aria-haspopup="true">Angebot</button>
+          <div class="drop"><a href="websites-landingpages.html"><small>01</small><strong>Websites &amp; Landingpages</strong><span>Damit nach dem Klick nicht Schluss ist.</span></a><a href="google-ads.html"><small>02</small><strong>Google Ads</strong><span>Sichtbar, wenn bereits gesucht wird.</span></a><a href="google-unternehmensprofil.html"><small>03</small><strong>Google Unternehmensprofil</strong><span>Der erste Eindruck in Suche und Maps.</span></a><a href="conversion-tracking.html"><small>04</small><strong>Conversion Tracking</strong><span>Sehen, was wirklich wirkt.</span></a><a href="index.html#leistungen"><small>05</small><strong>Alle Leistungen &amp; Preise</strong><span>Websites, Google Ads, Profil &amp; Tracking</span></a></div>
+        </li>
+        <li><a class="nav__link" href="index.html#ansatz">Mein Ansatz</a></li>
+        <li><a class="nav__link" href="index.html#ueber-mich">Über mich</a></li>
+        <li><a class="nav__link" href="index.html#ergebnisse">Ergebnisse</a></li>
+        <li><a class="nav__link" href="index.html#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <a class="header__more" href="index.html#leistungen">Leistungen ansehen</a>
+      <a class="header__cta" href="index.html#kontakt">Erstgespräch <span aria-hidden="true">→</span></a>
+      <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+    </div>
   </div>
-
+</header>
+<div class="mobile" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Mobile Navigation">
+    <a href="index.html#leistungen">Leistungen <small>01</small></a>
+    <div class="mobile__sub"><a href="websites-landingpages.html">Websites &amp; Landingpages</a><a href="google-ads.html">Google Ads</a><a href="google-unternehmensprofil.html">Google Unternehmensprofil</a><a href="conversion-tracking.html">Conversion Tracking</a></div>
+    <a href="index.html#ansatz">Mein Ansatz <small>02</small></a>
+    <a href="index.html#ueber-mich">Über mich <small>03</small></a>
+    <a href="index.html#ergebnisse">Ergebnisse <small>04</small></a>
+    <a href="index.html#faq">FAQ <small>05</small></a>
+    <a class="btn" href="index.html#kontakt">Erstgespräch anfragen <span class="arr" aria-hidden="true">→</span></a>
+  </nav>
+  <div class="mobile__meta">
+    <a href="mailto:info@lisascheier.de">info@lisascheier.de</a><br>
+    <a href="tel:+4917655061457">0176 550 614 57</a>
+  </div>
+</div>
+<main id="main" class="thanks"><div class="wrap--narrow">
+  <span class="kicker reveal">Anfrage angekommen</span>
+  <h1 class="hero__title hero__title--sub thanks__title reveal" data-d="1" aria-label="Danke. Ich melde mich innerhalb von 24 Stunden."><span class="hero__script" aria-hidden="true"><span class="hero__s">D</span><span class="hero__chade">anke.</span></span> <span class="hero__rest" aria-hidden="true">Ich melde mich innerhalb von 24 Stunden.</span></h1>
+  <p class="lead reveal" data-d="2" style="margin-inline:auto">Schön, dass du dich gemeldet hast. Ich lese mir deine Nachricht in Ruhe durch und melde mich innerhalb von 24 Stunden persönlich bei dir - per E-Mail oder, wenn du magst, telefonisch.</p>
+  <div class="btns reveal" data-d="3" style="justify-content:center;margin-top:40px"><a class="btn" href="index.html">Zurück zur Startseite <span class="arr" aria-hidden="true">→</span></a></div>
+</div></main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="" width="46" height="46"><span>Lisa Scheier</span></a>
+        <p class="footer__claim">Mehr Sichtbarkeit für das, <em>was du liebst.</em></p>
+      </div>
+      <div>
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="google-ads.html">Google Ads</a></li>
+          <li><a href="websites-landingpages.html">Websites &amp; Landingpages</a></li>
+          <li><a href="google-unternehmensprofil.html">Google Unternehmensprofil</a></li>
+          <li><a href="conversion-tracking.html">Conversion Tracking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Entdecken</h4>
+        <ul>
+          <li><a href="index.html#ansatz">Mein Ansatz</a></li>
+          <li><a href="index.html#ueber-mich">Über mich</a></li>
+          <li><a href="index.html#ergebnisse">Ergebnisse</a></li>
+          <li><a href="index.html#faq">Häufige Fragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:info@lisascheier.de">info@lisascheier.de</a></li>
+          <li><a href="tel:+4917655061457">0176 550 614 57</a></li>
+          <li><a href="index.html#kontakt">Erstgespräch anfragen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__brandmark" aria-hidden="true"><img class="footer__logo" src="assets/img/logo-footer.png" alt="" width="400" height="400" loading="lazy"><span class="footer__tag">Google Ads · Websites · Sichtbarkeit</span></div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Lisa Scheier · Google Ads · Websites · Online-Sichtbarkeit</span>
+      <nav aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js?v=1790757056" defer></script>
 </body>
 </html>

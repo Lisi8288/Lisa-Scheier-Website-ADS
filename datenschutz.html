@@ -1,377 +1,209 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutzerklärung | Lisa Scheier – Google Ads Expertin</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <!-- Google Fonts werden erst nach Cookie-Zustimmung geladen (DSGVO) -->
-  <style>
-    :root{
-      --ivory:#F8F2E8;--cream:#F0E8DA;--sand:#E8DDD0;
-      --champagne:#C9A84C;--champagne-light:#D4B85C;--champagne-pale:#E5D090;
-      --espresso:#1A1008;--espresso-mid:#2A1A08;--chocolate:#4A3018;--mocha:#6B5040;
-      --taupe:#6B5C50;--taupe-light:#9A8A7E;
-      --text:#4A3A2A;--text-muted:#8A7A6E;
-      --border:rgba(201,168,76,.2);
-      --font-serif:'Playfair Display','Cormorant Garamond',Georgia,serif;
-      --font-sans:'Jost',system-ui,sans-serif;
-      --container:1140px;--container-text:780px;--radius:4px;--radius-lg:16px;--transition:0.3s ease;
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
-    body{font-family:var(--font-sans);color:var(--text);background:#EDE4D5;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
-      background:
-        radial-gradient(ellipse 55% 45% at 95% 5%,rgba(255,252,244,.7) 0%,transparent 65%),
-        radial-gradient(ellipse 45% 40% at 5% 95%,rgba(255,250,240,.55) 0%,transparent 65%),
-        #EDE4D5}
-    img{max-width:100%;display:block}
-    a{color:var(--champagne);text-decoration:none;transition:color var(--transition)}
-    a:hover{color:var(--champagne-light)}
-    ul{list-style:none}
-    .container{width:min(var(--container),100% - 3rem);margin-inline:auto}
-    .container-text{width:min(var(--container-text),100% - 3rem);margin-inline:auto}
-    h1,h2,h3{font-family:var(--font-serif);font-weight:400;line-height:1.2}
-    em{font-style:italic;background:linear-gradient(105deg,var(--champagne) 0%,var(--champagne-light) 50%,#A88A20 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Datenschutzerklärung - Lisa Scheier</title>
+<meta name="description" content="Datenschutzerklärung von lisascheier.de.">
+<link rel="canonical" href="https://www.lisascheier.de/datenschutz.html">
+<meta name="theme-color" content="#0b0908">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Lisa Scheier">
+<meta property="og:title" content="Datenschutzerklärung - Lisa Scheier">
+<meta property="og:description" content="Datenschutzerklärung von lisascheier.de.">
+<meta property="og:url" content="https://www.lisascheier.de/datenschutz.html">
+<meta property="og:image" content="https://www.lisascheier.de/assets/img/lisa-about.webp?v=1790757056">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="preload" href="assets/fonts/cormorant-garamond-v21-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-v20-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/allura.woff2" as="font" type="font/woff2" crossorigin>
 
-    /* NAV */
-    .site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 0;transition:all var(--transition);background:#F5EEE4;box-shadow:0 1px 0 rgba(201,168,76,.15)}
-    .site-header.scrolled{background:rgba(248,242,232,.97);backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--border);padding:1rem 0}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:2rem}
-    .logo{display:flex;align-items:center;transition:opacity var(--transition)}
-    .logo:hover{opacity:.8}
-    .logo-img{height:80px;width:auto;mix-blend-mode:multiply;filter:contrast(1.15) saturate(1.1);display:block}
-    .nav-links{display:flex;align-items:center;gap:2.5rem;font-size:.85rem;font-weight:400;letter-spacing:.06em}
-    .nav-links a{color:rgba(61,43,32,.75);transition:color var(--transition)}
-    .nav-links a:hover{color:var(--champagne)}
-    .btn-nav{padding:.6rem 1.6rem;border:none;border-radius:100px;color:#2A1808!important;font-weight:500;background:linear-gradient(110deg,#A87808,#D4AE3A,#F5DC60,#C9A84C,#EAC840,#B89020,#D4AE3A);background-size:300% 100%;animation:goldFlow 10s ease-in-out infinite;box-shadow:0 3px 16px rgba(201,168,76,.4)}
-    .btn-nav:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(201,168,76,.55)}
-    @keyframes goldFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-    .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-    .burger span{display:block;width:24px;height:1.5px;background:#3D2B20;border-radius:2px}
-    @media(max-width:960px){
-      .nav-links{display:none}
-      .burger{display:flex}
-      .nav-links.open{display:flex;flex-direction:column;position:fixed;inset:0;background:var(--cream);z-index:200;align-items:center;justify-content:center;gap:2.5rem;font-size:1.5rem}
-      .nav-links.open a{color:#3D2B20}
-    }
-
-    /* PAGE HERO */
-    .page-hero{padding:10rem 0 5rem;text-align:center;background:linear-gradient(160deg,#4A3018 0%,#2A1A08 60%,#1A1008 100%);position:relative;overflow:hidden}
-    .page-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 110%,rgba(201,168,76,.12) 0%,transparent 70%);pointer-events:none}
-    .page-eyebrow{font-family:var(--font-sans);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:1rem;display:block}
-    .page-title{font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,4rem);font-weight:400;color:#F0E8DA;line-height:1.15}
-
-    /* CONTENT */
-    .legal-content{padding:5rem 0 7rem}
-    .legal-block{margin-bottom:2.75rem;padding-bottom:2.75rem;border-bottom:1px solid rgba(201,168,76,.12)}
-    .legal-block:last-of-type{border-bottom:none}
-    .legal-block h2{font-family:var(--font-serif);font-size:1.5rem;font-weight:500;color:#3D2B20;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(201,168,76,.2)}
-    .legal-block h3{font-family:var(--font-sans);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--champagne);margin-top:1.5rem;margin-bottom:.5rem}
-    .legal-block p{font-size:.95rem;color:var(--text-muted);margin-bottom:.65rem;line-height:1.75}
-    .legal-block ul{margin:.5rem 0 .75rem 1.25rem;display:flex;flex-direction:column;gap:.5rem}
-    .legal-block ul li{font-size:.95rem;color:var(--text-muted);list-style:disc}
-    .legal-block ol{margin:.5rem 0 .75rem 1.5rem;display:flex;flex-direction:column;gap:.5rem}
-    .legal-block ol li{font-size:.95rem;color:var(--text-muted)}
-    .legal-block a{color:var(--champagne)}
-    .legal-block a:hover{color:var(--champagne-light)}
-    .legal-hint{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-radius:var(--radius-lg);padding:1.5rem 2rem;margin-top:2.5rem}
-    .legal-hint p{font-size:.9rem;color:var(--text-muted);margin:0}
-    .legal-hint a{color:var(--champagne)}
-
-    /* FOOTER */
-    .site-footer{background:#1C1208;padding:3rem 0 0}
-    .footer-inner{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(201,168,76,.1)}
-    .footer-logo{margin-bottom:.5rem}
-    .footer-logo img{height:100px;width:auto;mix-blend-mode:screen;filter:contrast(1.2) saturate(1.1) brightness(1.8);opacity:.9}
-    .footer-tagline{font-size:.75rem;color:rgba(201,168,76,.45);letter-spacing:.1em}
-    .footer-nav,.footer-legal{display:flex;gap:2rem}
-    .footer-nav a,.footer-legal a{font-size:.83rem;color:rgba(201,168,76,.45);transition:color var(--transition)}
-    .footer-nav a:hover,.footer-legal a:hover{color:var(--champagne)}
-    .footer-bottom{padding:1.25rem 0;text-align:center}
-    .footer-bottom p{font-size:.75rem;color:rgba(201,168,76,.25)}
-    @media(max-width:700px){
-      .footer-inner{grid-template-columns:1fr;gap:1.5rem;text-align:center}
-      .footer-nav,.footer-legal{justify-content:center;flex-wrap:wrap}
-    }
-  </style>
+<link rel="stylesheet" href="assets/css/site.css?v=1790757056">
+<link rel="stylesheet" href="assets/css/variante-a.css?v=1790757056">
+<link rel="stylesheet" href="assets/css/variante-a-schwarz.css?v=1790757056">
+<meta name="robots" content="noindex,follow">
 </head>
 <body>
-
-  <!-- Marmor-Hintergrund -->
-  <svg xmlns="http://www.w3.org/2000/svg" style="position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-    <filter id="mf" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.010 0.004" numOctaves="5" seed="8" result="noise"/>
-      <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
-      <feComponentTransfer in="grey">
-        <feFuncR type="linear" slope="0.13" intercept="0.85"/>
-        <feFuncG type="linear" slope="0.10" intercept="0.79"/>
-        <feFuncB type="linear" slope="0.07" intercept="0.70"/>
-      </feComponentTransfer>
-    </filter>
-    <rect width="100%" height="100%" filter="url(#mf)"/>
-  </svg>
-
-  <header class="site-header" id="site-header">
-    <nav class="nav container">
-      <a href="index.html" class="logo">
-        <img src="Bilder/Design ohne Titel (12).png" alt="Lisa Scheier Google Ads" class="logo-img" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html#leistungen">Leistungen</a></li>
-        <li><a href="index.html#pakete">Pakete</a></li>
-        <li><a href="index.html#ueber-mich">Über mich</a></li>
-        <li><a href="index.html#kontakt" class="btn-nav">Erstgespräch</a></li>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="index.html" aria-label="Lisa Scheier - Startseite">
+      <img src="assets/img/logo.png" alt="" width="46" height="46"><span>Lisa Scheier</span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <ul class="nav__list">
+        <li class="has-drop">
+          <button class="nav__link" aria-expanded="false" aria-haspopup="true">Angebot</button>
+          <div class="drop"><a href="websites-landingpages.html"><small>01</small><strong>Websites &amp; Landingpages</strong><span>Damit nach dem Klick nicht Schluss ist.</span></a><a href="google-ads.html"><small>02</small><strong>Google Ads</strong><span>Sichtbar, wenn bereits gesucht wird.</span></a><a href="google-unternehmensprofil.html"><small>03</small><strong>Google Unternehmensprofil</strong><span>Der erste Eindruck in Suche und Maps.</span></a><a href="conversion-tracking.html"><small>04</small><strong>Conversion Tracking</strong><span>Sehen, was wirklich wirkt.</span></a><a href="index.html#leistungen"><small>05</small><strong>Alle Leistungen &amp; Preise</strong><span>Websites, Google Ads, Profil &amp; Tracking</span></a></div>
+        </li>
+        <li><a class="nav__link" href="index.html#ansatz">Mein Ansatz</a></li>
+        <li><a class="nav__link" href="index.html#ueber-mich">Über mich</a></li>
+        <li><a class="nav__link" href="index.html#ergebnisse">Ergebnisse</a></li>
+        <li><a class="nav__link" href="index.html#faq">FAQ</a></li>
       </ul>
-      <button class="burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
     </nav>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="page-eyebrow">Rechtliches</span>
-      <h1 class="page-title">Datenschutzerklärung</h1>
+    <div class="header__actions">
+      <a class="header__more" href="index.html#leistungen">Leistungen ansehen</a>
+      <a class="header__cta" href="index.html#kontakt">Erstgespräch <span aria-hidden="true">→</span></a>
+      <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
     </div>
-  </section>
+  </div>
+</header>
+<div class="mobile" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Mobile Navigation">
+    <a href="index.html#leistungen">Leistungen <small>01</small></a>
+    <div class="mobile__sub"><a href="websites-landingpages.html">Websites &amp; Landingpages</a><a href="google-ads.html">Google Ads</a><a href="google-unternehmensprofil.html">Google Unternehmensprofil</a><a href="conversion-tracking.html">Conversion Tracking</a></div>
+    <a href="index.html#ansatz">Mein Ansatz <small>02</small></a>
+    <a href="index.html#ueber-mich">Über mich <small>03</small></a>
+    <a href="index.html#ergebnisse">Ergebnisse <small>04</small></a>
+    <a href="index.html#faq">FAQ <small>05</small></a>
+    <a class="btn" href="index.html#kontakt">Erstgespräch anfragen <span class="arr" aria-hidden="true">→</span></a>
+  </nav>
+  <div class="mobile__meta">
+    <a href="mailto:info@lisascheier.de">info@lisascheier.de</a><br>
+    <a href="tel:+4917655061457">0176 550 614 57</a>
+  </div>
+</div>
+<main id="main" class="legal"><div class="wrap--narrow">
+<span class="kicker">Rechtliches</span>
+<h1>Datenschutz&shy;erklärung</h1>
 
-  <main class="legal-content">
-    <div class="container-text">
+<h2>1. Einleitung</h2>
+<p>Der Schutz deiner persönlichen Daten ist mir wichtig. Diese Datenschutzerklärung erläutert Art, Umfang und Zweck der Verarbeitung personenbezogener Daten im Rahmen dieser Website.</p>
+<h3>Allgemeine Hinweise</h3>
+<p>Diese Datenschutzerklärung gibt dir einen Überblick darüber, was mit deinen personenbezogenen Daten geschieht, wenn du diese Website besuchst. Personenbezogene Daten sind alle Informationen, mit denen du persönlich identifiziert werden kannst.</p>
+<h3>Verantwortliche Stelle</h3>
+<p>Verantwortlich für die Datenverarbeitung auf dieser Website bin ich, Lisa Scheier. Meine Kontaktdaten findest du im Abschnitt „Verantwortliche“ dieser Datenschutzerklärung.</p>
+<h3>Erhebung deiner Daten</h3>
+<p>Personenbezogene Daten werden zum einen erhoben, wenn du sie mir aktiv mitteilst, z. B. über das Kontaktformular oder per E-Mail. Andere Daten werden beim Besuch der Website automatisch erfasst - vor allem technische Daten (z. B. Browser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
+<h3>Widerruf von Einwilligungen</h3>
+<p>Manche Datenverarbeitungen sind nur mit deiner ausdrücklichen Einwilligung möglich. Du kannst eine erteilte Einwilligung jederzeit widerrufen, z. B. per E-Mail an mich. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt.</p>
+<h3>Widerspruchsrecht (Art. 21 DSGVO)</h3>
+<p>Erfolgt die Verarbeitung deiner Daten auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO, hast du das Recht, jederzeit Widerspruch gegen diese Verarbeitung einzulegen.</p>
+<h3>Beschwerderecht und Auskunft</h3>
+<p>Du hast das Recht, dich bei Verstößen gegen die DSGVO bei einer Aufsichtsbehörde zu beschweren. Außerdem hast du jederzeit das Recht auf unentgeltliche Auskunft über deine gespeicherten Daten, deren Herkunft, Empfänger und den Zweck der Verarbeitung.</p>
 
-      <div class="legal-block">
-        <h2>1. Einleitung</h2>
-        <p>Der Schutz Ihrer persönlichen Daten hat höchste Priorität. Diese Datenschutzerklärung erläutert die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten im Rahmen dieses Onlineangebots.</p>
+<h2>2. Verantwortliche</h2>
+<address>Lisa Scheier<br>Hintere Straße 19<br>75446 Wiernsheim</address>
+<dl style="margin-top:20px">
+  <dt>Website</dt><dd><a href="https://www.lisascheier.de">www.lisascheier.de</a></dd>
+  <dt>E-Mail</dt><dd><a href="mailto:info@lisascheier.de">info@lisascheier.de</a></dd>
+  <dt>Telefon</dt><dd><a href="tel:+4917655061457">0176 55061457</a></dd>
+</dl>
 
-        <h3>Allgemeine Hinweise</h3>
-        <p>Diese Datenschutzerklärung gibt Ihnen einen umfassenden Überblick darüber, was mit Ihren personenbezogenen Daten geschieht, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Informationen, die dazu genutzt werden können, Sie persönlich zu identifizieren.</p>
+<h2>3. Auftragsverarbeiter</h2>
+<p>Ich arbeite mit Dienstleistern zusammen, die in meinem Auftrag Daten verarbeiten (z. B. für Hosting und Kontaktformular). Diese sind vertraglich verpflichtet, die Daten vertraulich zu behandeln und ausschließlich im Rahmen der jeweiligen Dienstleistung zu nutzen.</p>
 
-        <h3>Verantwortliche Stelle</h3>
-        <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Die Kontaktdaten der Verantwortlichen finden Sie im Abschnitt „Verantwortlicher" in dieser Datenschutzerklärung.</p>
+<h2>4. Begriffsbestimmungen</h2>
+<dl>
+  <dt>Personenbezogene Daten</dt><dd>Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.</dd>
+  <dt>Verarbeitung</dt><dd>Jede Handlung, die im Zusammenhang mit personenbezogenen Daten durchgeführt wird - das Erheben, Speichern, Verwenden, Übermitteln oder Löschen.</dd>
+  <dt>Verantwortlicher</dt><dd>Die Person oder Stelle, die über Zwecke und Mittel der Verarbeitung personenbezogener Daten entscheidet.</dd>
+  <dt>Auftragsverarbeiter</dt><dd>Eine Person oder Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.</dd>
+  <dt>Einwilligung</dt><dd>Jede freiwillig, für einen bestimmten Fall, in informierter Weise und unmissverständlich abgegebene Willensbekundung.</dd>
+</dl>
 
-        <h3>Erhebung Ihrer Daten</h3>
-        <p>Personenbezogene Daten werden zum einen dadurch erhoben, dass Sie diese aktiv mitteilen, z.B. durch das Ausfüllen eines Kontaktformulars. Andere Daten werden automatisch beim Besuch der Website erfasst — hierbei handelt es sich vor allem um technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
+<h2>5. Hosting</h2>
+<p>Diese Website wird bei Netlify gehostet. Anbieter ist die Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA. Beim Aufruf der Website verarbeitet Netlify technisch notwendige Daten, insbesondere deine IP-Adresse, um die Seite auszuliefern und die Sicherheit des Dienstes zu gewährleisten (siehe Abschnitt 11). Dabei kann eine Übermittlung in die USA stattfinden. Netlify ist unter dem EU-US Data Privacy Framework zertifiziert; zusätzlich besteht ein Vertrag zur Auftragsverarbeitung auf Grundlage der EU-Standardvertragsklauseln.</p>
+<p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und zuverlässigen Bereitstellung der Website). Weitere Infos: <a href="https://www.netlify.com/privacy/" rel="noopener" target="_blank">Netlify-Datenschutzerklärung</a></p>
+<p>Die Domain wird bei der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland, verwaltet. IONOS leitet Aufrufe der Domain lediglich an Netlify weiter.</p>
 
-        <h3>Widerruf von Einwilligungen zur Datenverarbeitung</h3>
-        <p>Bestimmte Datenverarbeitungen können nur mit Ihrer ausdrücklichen Einwilligung erfolgen. Diese Einwilligung kann jederzeit widerrufen werden. Die Rechtmäßigkeit der bis zum Zeitpunkt des Widerrufs erfolgten Datenverarbeitung bleibt davon unberührt.</p>
+<h2>6. Rechtliche Grundlagen der Datenverarbeitung</h2>
+<ul>
+  <li>Art. 6 Abs. 1 lit. a DSGVO - Einwilligung der betroffenen Person</li>
+  <li>Art. 6 Abs. 1 lit. b DSGVO - Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen</li>
+  <li>Art. 6 Abs. 1 lit. c DSGVO - Erfüllung rechtlicher Verpflichtungen</li>
+  <li>Art. 6 Abs. 1 lit. f DSGVO - Wahrung berechtigter Interessen</li>
+</ul>
 
-        <h3>Widerspruchsrecht (Art. 21 DSGVO)</h3>
-        <p>Erfolgt die Verarbeitung Ihrer personenbezogenen Daten auf der Basis von Art. 6 Abs. 1 lit. e oder f DSGVO, haben Sie das Recht, jederzeit gegen diese Verarbeitung Widerspruch einzulegen.</p>
+<h2>7. Datenweitergabe an unsichere Drittstaaten</h2>
+<p>Wenn Dienste von Unternehmen mit Sitz außerhalb der EU bzw. des EWR eingesetzt werden, können deine Daten in diese Länder übertragen werden. Auf dieser Website betrifft das das Hosting (Netlify, USA - siehe Abschnitt 5) und das Kontaktformular (Web3Forms, USA - siehe Abschnitt 13). In den USA besteht möglicherweise kein mit der EU vergleichbares Datenschutzniveau; US-Behörden könnten unter Umständen auf die Daten zugreifen.</p>
 
-        <h3>Rechte gemäß DSGVO</h3>
-        <p>Sie haben das Recht, bei Verstößen gegen die DSGVO eine Beschwerde bei einer zuständigen Aufsichtsbehörde einzureichen. Jede betroffene Person hat das Recht auf unentgeltliche Auskunft über ihre gespeicherten personenbezogenen Daten, deren Herkunft, Empfänger sowie den Zweck der Datenverarbeitung.</p>
-      </div>
+<h2>8. Speicherdauer</h2>
+<p>Ich speichere personenbezogene Daten nur so lange, bis der Zweck der Verarbeitung entfällt. Wenn du berechtigt die Löschung verlangst oder eine Einwilligung widerrufst, werden deine Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten (z. B. aus Steuer- oder Handelsrecht) entgegenstehen.</p>
 
-      <div class="legal-block">
-        <h2>2. Verantwortlicher</h2>
-        <p>Verantwortliche für die Datenverarbeitung auf dieser Website im Sinne der DSGVO ist:</p>
-        <p style="margin-top:.75rem;line-height:2.2;">
-          Lisa Scheier<br />
-          Marsstraße 2, 75417 Mühlacker<br />
-          Website: <a href="https://www.lisascheier.de" target="_blank" rel="noopener">www.lisascheier.de</a><br />
-          E-Mail: <a href="mailto:info@lisascheier.de">info@lisascheier.de</a><br />
-          Telefon: <a href="tel:+4917655061457">017655061457</a>
-        </p>
-      </div>
+<h2>9. Sicherheitsmaßnahmen und Datenminimierung</h2>
+<p>Ich treffe angemessene technische und organisatorische Maßnahmen, um deine Daten zu schützen, und erhebe nur die Daten, die für den jeweiligen Zweck erforderlich sind.</p>
 
-      <div class="legal-block">
-        <h2>3. Auftragsverarbeiter</h2>
-        <p>Die Zusammenarbeit erfolgt mit verschiedenen Auftragsverarbeitern, die im Auftrag Daten verarbeiten. Diese Dienstleister sind vertraglich verpflichtet, die Daten vertraulich zu behandeln und ausschließlich im Rahmen der jeweiligen Dienstleistung zu nutzen.</p>
-      </div>
+<h2>10. SSL/TLS-Verschlüsselung</h2>
+<p>Diese Website nutzt SSL/TLS-Verschlüsselung über HTTPS. Eine verschlüsselte Verbindung erkennst du daran, dass die Adresszeile des Browsers mit „https://“ beginnt und ein Schloss-Symbol angezeigt wird.</p>
 
-      <div class="legal-block">
-        <h2>4. Begriffsbestimmungen</h2>
-        <p><strong>Personenbezogene Daten:</strong> Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.</p>
-        <p><strong>Verarbeitung:</strong> Jede Handlung, die im Zusammenhang mit personenbezogenen Daten durchgeführt wird — das Erheben, Speichern, Verwenden, Übermitteln oder Löschen.</p>
-        <p><strong>Verantwortlicher:</strong> Die Person oder Stelle, die über Zwecke und Mittel der Verarbeitung personenbezogener Daten entscheidet.</p>
-        <p><strong>Auftragsverarbeiter:</strong> Eine Person oder Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.</p>
-        <p><strong>Einwilligung:</strong> Jede freiwillig, für einen bestimmten Fall, in informierter Weise und unmissverständlich abgegebene Willensbekundung.</p>
-      </div>
+<h2>11. Server-Log-Dateien</h2>
+<p>Bei jedem Zugriff auf die Website erfasst der Hosting-Anbieter automatisch: IP-Adresse, Datum und Uhrzeit des Zugriffs, Name und URL der abgerufenen Datei, Referrer-URL, Browser, Betriebssystem, Access-Provider und HTTP-Statuscode. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien und sicheren Bereitstellung der Website). Die Daten werden nicht genutzt, um Rückschlüsse auf deine Person zu ziehen.</p>
 
-      <div class="legal-block">
-        <h2>5. Hosting</h2>
-        <p>Diese Website wird auf den Servern eines externen Dienstleisters gehostet. Die Datenverarbeitung durch den Hosting-Anbieter erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO. Mit dem Hosting-Anbieter wurde ein Vertrag zur Auftragsverarbeitung (AVV) abgeschlossen.</p>
-        <p>Der Hosting-Anbieter ist:<br />
-        <strong>1&1 IONOS</strong>, Elgendorfer Str. 57, 56410 Montabaur, Deutschland<br />
-        Datenschutzerklärung: <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" rel="noopener">ionos.de/terms-gtc/datenschutzerklaerung/</a></p>
-      </div>
+<h2>12. Cookies und ähnliche Technologien</h2>
+<p>Diese Website setzt derzeit keine Analyse-, Tracking- oder Marketing-Cookies ein und speichert keine Informationen auf deinem Endgerät, die eine Einwilligung erfordern. Deshalb gibt es auch keinen Cookie-Banner.</p>
+<p>Sollten künftig Analyse- oder Marketing-Dienste eingesetzt werden, geschieht das ausschließlich mit deiner vorherigen Einwilligung (§ 25 Abs. 1 TDDDG i. V. m. Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit widerrufen kannst. Diese Datenschutzerklärung wird dann entsprechend angepasst.</p>
 
-      <div class="legal-block">
-        <h2>6. Rechtliche Grundlagen der Datenverarbeitung</h2>
-        <p>Die Verarbeitung Ihrer personenbezogenen Daten erfolgt auf Grundlage der DSGVO. Je nach Zweck kommen unterschiedliche Rechtsgrundlagen zur Anwendung:</p>
-        <ul>
-          <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong> – Einwilligung der betroffenen Person</li>
-          <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> – Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen</li>
-          <li><strong>Art. 6 Abs. 1 lit. c DSGVO</strong> – Erfüllung rechtlicher Verpflichtungen</li>
-          <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong> – Wahrung berechtigter Interessen</li>
-        </ul>
-      </div>
+<h2>13. Kontaktformular</h2>
+<p>Wenn du mir über das Kontaktformular schreibst, werden deine Angaben (Name, E-Mail-Adresse sowie freiwillige Angaben wie Beruf, Budget, Interesse und Nachricht) zur Bearbeitung deiner Anfrage verarbeitet. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du über die Checkbox im Formular erteilst, sowie - wenn deine Anfrage auf einen Auftrag abzielt - Art. 6 Abs. 1 lit. b DSGVO. Die Daten werden gelöscht, sobald deine Anfrage erledigt ist und keine Aufbewahrungspflichten bestehen.</p>
+<h3>Web3Forms</h3>
+<p>Das Kontaktformular wird über Web3Forms (One Codex Inc., 2810 N Church St, Suite 92854, Wilmington, Delaware 19802-4447, USA) verarbeitet. Beim Absenden werden deine Angaben an Server von Web3Forms in den USA übertragen und von dort an meine E-Mail-Adresse weitergeleitet. Web3Forms speichert die Daten nur zur Zustellung. Die Übermittlung in die USA erfolgt auf Grundlage deiner ausdrücklichen Einwilligung (Art. 49 Abs. 1 lit. a DSGVO); auf das mögliche geringere Datenschutzniveau in den USA wird direkt am Formular hingewiesen. Wenn du das nicht möchtest, kannst du mir alternativ einfach eine E-Mail schreiben. Weitere Infos: <a href="https://web3forms.com/privacy" rel="noopener" target="_blank">web3forms.com/privacy</a></p>
 
-      <div class="legal-block">
-        <h2>7. Datenweitergabe an unsichere Drittstaaten</h2>
-        <p>Falls auf dieser Website Tools von Unternehmen eingesetzt werden, die ihren Sitz in datenschutzrechtlich unsicheren Drittstaaten haben, können Ihre personenbezogenen Daten in diese Staaten übertragen werden. Für die USA ist eine Datenübertragung nur dann zulässig, wenn der Empfänger eine Zertifizierung unter dem „EU-US Data Privacy Framework" (DPF) besitzt.</p>
-      </div>
+<h2>14. Anfragen per E-Mail oder Telefon</h2>
+<p>Wenn du mich per E-Mail oder Telefon kontaktierst, verarbeite ich deine Angaben ausschließlich zur Bearbeitung deiner Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Auftrags) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
 
-      <div class="legal-block">
-        <h2>8. Speicherdauer</h2>
-        <p>Personenbezogene Daten werden beim Verantwortlichen gespeichert, bis der Zweck für die Datenverarbeitung entfällt. Bei einem berechtigten Löschersuchen oder dem Widerruf einer Einwilligung werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-      </div>
+<h2>15. Untersagung der Zusendung von Werbe-E-Mails</h2>
+<p>Der Nutzung der im Impressum veröffentlichten Kontaktdaten zur Zusendung von nicht ausdrücklich angeforderter Werbung wird hiermit widersprochen. Bei Verstößen behalte ich mir rechtliche Schritte vor.</p>
 
-      <div class="legal-block">
-        <h2>9. Sicherheitsmaßnahmen und Datenminimierung</h2>
-        <p>Es werden umfassende technische und organisatorische Maßnahmen ergriffen, um Ihre personenbezogenen Daten wirksam zu schützen. Es werden ausschließlich die für den jeweiligen Zweck unbedingt erforderlichen Daten erhoben.</p>
-      </div>
+<h2>16. Schriftarten</h2>
+<p>Die verwendeten Schriften sind lokal auf dem Server eingebunden. Beim Aufruf der Website wird keine Verbindung zu Servern von Google oder anderen Drittanbietern hergestellt.</p>
 
-      <div class="legal-block">
-        <h2>10. SSL/TLS-Verschlüsselung</h2>
-        <p>Diese Website nutzt SSL/TLS-Verschlüsselung über HTTPS. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
-      </div>
+<h2>17. Kunden- und Vertragsdaten</h2>
+<p>Wenn wir zusammenarbeiten, verarbeite ich die dafür nötigen Kunden- und Vertragsdaten zur Durchführung des Auftrags (Art. 6 Abs. 1 lit. b DSGVO) und zur Erfüllung gesetzlicher Pflichten (Art. 6 Abs. 1 lit. c DSGVO). Die Daten werden nach Abschluss des Auftrags und Ablauf der gesetzlichen Aufbewahrungsfristen gelöscht.</p>
 
-      <div class="legal-block">
-        <h2>11. Speicherung von Nutzerinformationen in Log-Files</h2>
-        <p>Bei jedem Zugriff auf die Website werden automatisch folgende Informationen erfasst:</p>
-        <ol type="a">
-          <li>IP-Adresse des anfragenden Rechners</li>
-          <li>Datum und Uhrzeit des Zugriffs</li>
-          <li>Name und URL der abgerufenen Datei</li>
-          <li>Website, von welcher der Zugriff erfolgt (Referrer-URL)</li>
-          <li>Verwendeter Browser und User Agent String</li>
-          <li>Betriebssystem</li>
-          <li>Name Ihres Access-Providers</li>
-          <li>HTTP-Statuscode</li>
-        </ol>
-        <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Die erhobenen Daten werden nicht genutzt, um Rückschlüsse auf Ihre Person zu ziehen.</p>
-      </div>
+<h2>18. Online-Meetings</h2>
+<p>Für Online-Termine nutze ich Google Meet (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Dabei können IP-Adresse, Geräte-Informationen und Kommunikationsinhalte verarbeitet werden. Eine Übermittlung an die Google LLC in den USA ist möglich; Google ist unter dem EU-US Data Privacy Framework zertifiziert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Mehr unter <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">policies.google.com/privacy</a></p>
 
-      <div class="legal-block">
-        <h2>12. Cookies</h2>
-        <p>Diese Website verwendet Cookies — kleine Dateien, die Ihr Browser auf Ihrem Endgerät speichert. Cookies richten keinen Schaden an und enthalten keine Schadsoftware.</p>
-        <p>Es werden Session-Cookies (werden nach Sitzungsende gelöscht), temporäre Cookies sowie Analyse-Cookies eingesetzt. Rechtsgrundlage ist Art. 6 Abs. 1 S. 1 lit. f DSGVO.</p>
-        <p>Sie können Ihren Browser so konfigurieren, dass keine Cookies gespeichert werden. Die vollständige Deaktivierung kann jedoch dazu führen, dass nicht alle Funktionen der Website genutzt werden können.</p>
-      </div>
-
-      <div class="legal-block">
-        <h2>13. Nutzung des Kontaktformulars</h2>
-        <p>Bei Fragen besteht die Möglichkeit, über das auf dieser Website bereitgestellte Formular Kontakt aufzunehmen. Die Datenverarbeitung erfolgt nach Art. 6 Abs. 1 S. 1 lit. a DSGVO auf Grundlage der freiwillig erteilten Einwilligung. Die erhobenen personenbezogenen Daten werden nach Erledigung der Anfrage regelmäßig gelöscht.</p>
-
-        <h3>Web3Forms (Formular-Dienstleister)</h3>
-        <p>Das Kontaktformular dieser Website wird über den Dienst <strong>Web3Forms</strong> verarbeitet. Anbieter ist die <strong>Web3Forms</strong> (One Codex Inc., 2810 N Church St, Suite 92854, Wilmington, Delaware 19802-4447, USA).</p>
-        <p>Wenn Sie das Kontaktformular absenden, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Nachricht sowie optionale weitere Angaben) an die Server von Web3Forms in den USA übertragen und von dort an die angegebene Empfänger-E-Mail-Adresse weitergeleitet. Web3Forms speichert die übermittelten Daten ausschließlich zur Zustellung der E-Mail und löscht diese anschließend zeitnah.</p>
-        <p>Die Übertragung in die USA erfolgt auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO (ausdrückliche Einwilligung durch Absenden des Formulars). Rechtsgrundlage der Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO.</p>
-        <p>Weitere Informationen: <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">web3forms.com/privacy</a></p>
-      </div>
-
-      <div class="legal-block">
-        <h2>14. Anfragen per E-Mail oder Telefon</h2>
-        <p>Anfragen per E-Mail oder Telefon werden ausschließlich zum Zwecke der Bearbeitung verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bzw. Art. 6 Abs. 1 lit. f DSGVO.</p>
-      </div>
-
-      <div class="legal-block">
-        <h2>15. Untersagung der Zusendung von Werbe-E-Mails</h2>
-        <p>Die Nutzung der im Impressum veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit untersagt. Bei Verstößen behalten wir uns rechtliche Schritte vor.</p>
-      </div>
-
-      <div class="legal-block">
-        <h2>16. Analyse- und Tracking-Tools</h2>
-
-        <h3>Google Ads Tracking</h3>
-        <p>Es wird Google Ads Tracking verwendet (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Google Ads Tracking setzt Cookies ein, um die Effektivität von Werbekampagnen zu messen. Google ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
-
-        <h3>Google Ads Remarketing</h3>
-        <p>Es wird Google Ads Remarketing verwendet (Google Ireland Limited), um gezielte Werbung an Nutzerinnen und Nutzer auszuspielen, die zuvor diese Website besucht haben. Google ist unter dem EU-US DPF zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
-
-        <h3>Google Analytics</h3>
-        <p>Es wird Google Analytics verwendet (Google Ireland Limited). Google Analytics setzt Cookies ein, um eine Analyse der Benutzung der Website zu ermöglichen. Die IP-Anonymisierung ist aktiviert. Google ist unter dem EU-US DPF zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
-
-        <h3>Google Conversion Tracking</h3>
-        <p>Es wird Google Conversion Tracking verwendet (Google Ireland Limited), um die Effektivität von Anzeigen zu messen. Google ist unter dem EU-US DPF zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
-
-        <h3>Google Tag Manager</h3>
-        <p>Es wird der Google Tag Manager verwendet (Google Ireland Limited). Der Tag Manager selbst verwendet keine Cookies und erhebt keine personenbezogenen Daten, sondern verwaltet lediglich andere Tags. Google ist unter dem EU-US DPF zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
-
-        <h3>IONOS WebAnalytics</h3>
-        <p>Es wird IONOS WebAnalytics verwendet (1&1 IONOS SE, Elgendorfer Straße 57, 56410 Montabaur). Die Datenerhebung erfolgt laut IONOS vollständig anonymisiert. Cookies werden von IONOS WebAnalytics nicht gespeichert. Weitere Informationen: <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" rel="noopener">ionos.de/terms-gtc/datenschutzerklaerung/</a></p>
-
-        <h3>Google Fonts</h3>
-        <p>Diese Website nutzt Google Fonts zur einheitlichen Darstellung von Schriftarten (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Google Fonts werden ausschließlich nach erteilter Cookie-Einwilligung geladen. Ohne Einwilligung werden ausschließlich systemseitig vorhandene Schriften verwendet, sodass keine Verbindung zu Google-Servern hergestellt wird.</p>
-        <p>Bei Einwilligung wird beim Laden der Schriften Ihre IP-Adresse an Google übermittelt. Google ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO. Weitere Informationen: <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener">developers.google.com/fonts/faq/privacy</a></p>
-      </div>
-
-      <div class="legal-block">
-        <h2>17. Formular-Tools</h2>
-        <p>Für das Kontaktformular wird der Dienst Web3Forms (One Codex Inc., USA) eingesetzt. Einzelheiten zur Datenverarbeitung finden Sie in Abschnitt 13 dieser Datenschutzerklärung. Die Nutzung erfolgt auf Grundlage der Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Einwilligungen sind jederzeit mit Wirkung für die Zukunft widerrufbar.</p>
-      </div>
-
-      <div class="legal-block">
-        <h2>18. Terminbuchungs-Tool</h2>
-        <p>Diese Website verwendet Calendly (Calendly LLC, 88 N Avondale Rd Ste 603 Avondale Estates, GA 30002-1323, USA) zur Online-Terminbuchung. Beim Buchen eines Termins werden die eingegebenen Daten (Name, E-Mail, Telefon, Termin) an Calendly übermittelt. Weitere Informationen: <a href="https://calendly.com/privacy" target="_blank" rel="noopener">calendly.com/privacy</a></p>
-      </div>
-
-      <div class="legal-block">
-        <h2>19. Verarbeitung von Kunden- und Vertragsdaten</h2>
-        <p>Personenbezogene Kunden- und Vertragsdaten werden zur Begründung, inhaltlichen Ausgestaltung und Änderung der Vertragsbeziehungen erhoben und verarbeitet. Rechtsgrundlagen sind Art. 6 Abs. 1 lit. b, c und f DSGVO. Die erhobenen Kundendaten werden nach Abschluss des Auftrags und Ablauf gesetzlicher Aufbewahrungsfristen gelöscht.</p>
-      </div>
-
-      <div class="legal-block">
-        <h2>20. Konferenz-Tool</h2>
-        <h3>Google Meet</h3>
-        <p>Es wird Google Meet (Google Ireland Limited) verwendet, um virtuelle Meetings zu ermöglichen. Personenbezogene Daten wie IP-Adresse und Kommunikationsinhalte können übertragen werden. Google ist unter dem EU-US DPF zertifiziert. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
-      </div>
-
-      <div class="legal-block">
-        <h2>21. Ihre Rechte als betroffene Person</h2>
-        <p>Sie haben gegenüber dem Verantwortlichen folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
-        <ul>
-          <li><strong>Recht auf Auskunft</strong> (Art. 15 DSGVO) – Sie können jederzeit Auskunft über die bei uns gespeicherten Daten, deren Herkunft, Empfänger und Verarbeitungszweck verlangen.</li>
-          <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO) – Sie können die Berichtigung unrichtiger oder unvollständiger Daten verlangen.</li>
-          <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO) – Sie können die Löschung Ihrer Daten verlangen, sofern keine gesetzliche Aufbewahrungspflicht entgegensteht.</li>
-          <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO) – Unter bestimmten Voraussetzungen können Sie verlangen, dass die Verarbeitung Ihrer Daten eingeschränkt wird.</li>
-          <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO) – Sie haben das Recht, Ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.</li>
-          <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO) – Sie können der Verarbeitung Ihrer Daten auf Basis berechtigter Interessen jederzeit widersprechen.</li>
-          <li><strong>Recht auf Widerruf</strong> – Eine erteilte Einwilligung zur Datenverarbeitung kann jederzeit mit Wirkung für die Zukunft widerrufen werden.</li>
-          <li><strong>Beschwerderecht</strong> (Art. 77 DSGVO) – Sie haben das Recht, sich bei der zuständigen Datenschutzaufsichtsbehörde zu beschweren. In Baden-Württemberg ist das der <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener">Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg</a>.</li>
-        </ul>
-        <p style="margin-top:.75rem;">Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info@lisascheier.de">info@lisascheier.de</a></p>
-      </div>
-
-      <div class="legal-hint">
-        <p>Bei Fragen zum Datenschutz erreichst du mich jederzeit per E-Mail: <a href="mailto:info@lisascheier.de">info@lisascheier.de</a> oder telefonisch unter <a href="tel:+4917655061457">017655061457</a>.</p>
-      </div>
-
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
+<h2>19. Deine Rechte als betroffene Person</h2>
+<p>Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20), Widerspruch (Art. 21), Widerruf einer Einwilligung, Beschwerde bei der Aufsichtsbehörde (Art. 77 DSGVO - in Baden-Württemberg: Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg).</p>
+<p>Kontakt zur Rechteausübung: <a href="mailto:info@lisascheier.de">info@lisascheier.de</a></p>
+</div></main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
       <div>
-        <div class="footer-logo">
-          <img src="Bilder/Design ohne Titel (12).png" alt="Lisa Scheier Google Ads" />
-        </div>
-        <div class="footer-tagline">Google Ads Expertin für lokale Unternehmen</div>
+        <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="" width="46" height="46"><span>Lisa Scheier</span></a>
+        <p class="footer__claim">Mehr Sichtbarkeit für das, <em>was du liebst.</em></p>
       </div>
-      <nav class="footer-nav">
-        <a href="index.html#leistungen">Leistungen</a>
-        <a href="index.html#pakete">Pakete</a>
-        <a href="index.html#ueber-mich">Über mich</a>
-        <a href="index.html#kontakt">Kontakt</a>
-      </nav>
-      <div class="footer-legal">
+      <div>
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="google-ads.html">Google Ads</a></li>
+          <li><a href="websites-landingpages.html">Websites &amp; Landingpages</a></li>
+          <li><a href="google-unternehmensprofil.html">Google Unternehmensprofil</a></li>
+          <li><a href="conversion-tracking.html">Conversion Tracking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Entdecken</h4>
+        <ul>
+          <li><a href="index.html#ansatz">Mein Ansatz</a></li>
+          <li><a href="index.html#ueber-mich">Über mich</a></li>
+          <li><a href="index.html#ergebnisse">Ergebnisse</a></li>
+          <li><a href="index.html#faq">Häufige Fragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:info@lisascheier.de">info@lisascheier.de</a></li>
+          <li><a href="tel:+4917655061457">0176 550 614 57</a></li>
+          <li><a href="index.html#kontakt">Erstgespräch anfragen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__brandmark" aria-hidden="true"><img class="footer__logo" src="assets/img/logo-footer.png" alt="" width="400" height="400" loading="lazy"><span class="footer__tag">Google Ads · Websites · Sichtbarkeit</span></div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Lisa Scheier · Google Ads · Websites · Online-Sichtbarkeit</span>
+      <nav aria-label="Rechtliches">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
-      </div>
+      </nav>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Lisa Scheier. Alle Rechte vorbehalten.</p>
-    </div>
-  </footer>
-
-  <script>
-    const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-    burger.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-  </script>
-
+  </div>
+</footer>
+<script src="assets/js/site.js?v=1790757056" defer></script>
 </body>
 </html>
