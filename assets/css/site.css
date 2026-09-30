@@ -991,7 +991,7 @@ body::before{display:none !important}
 }
 
 /* Gleicher Abstand zur Oberkante in allen Abschnitten (wie Leistungen, Über mich, Ergebnisse, FAQ, Kontakt) */
-main > section:not(.hero):not(.quote){padding-top:calc(var(--section) * .82) !important}
+main > section:not(.hero):not(.quote):not(.page-hero){padding-top:calc(var(--section) * .82) !important}
 
 /* Kombi-Hinweis in Taupe-Glas wie die Kundenstimmen */
 .combo,.services-sec .combo{
@@ -1111,3 +1111,29 @@ a.testi__shot:hover .testi__screen img{transition-duration:12s}
 
 /* Handy: Foto bei Über mich nicht mitwandern lassen (sonst schiebt sich der Stempel über den Text) */
 @media (max-width:860px){.about__photo{position:relative !important;top:auto !important}}
+
+/* Handy-Feinschliff (30.09.) */
+@media (max-width:860px){
+  /* Gesehen werden: auch am Handy nur gut die Hälfte des Gesichts */
+  .problem__figure--photo{overflow:hidden}
+  .problem__figure--photo img{transform:translateX(-28%) !important}
+  /* Unterseiten: erst Überschrift & Text, dann das Bild */
+  .page-hero__img{order:0 !important;margin-top:clamp(36px,8vw,56px)}
+}
+@media (max-width:860px){
+  /* Mein Ansatz: Kästchen nur so hoch wie ihr Inhalt, kein leerer Raum */
+  .flow__card{min-height:0 !important;height:auto !important}
+  .flow__card--site{height:auto !important;aspect-ratio:4/3}
+  .flow__card--lead .flow__lines{margin-bottom:clamp(20px,5vw,28px) !important}
+}
+@media (max-width:860px){.page-hero{padding-top:calc(var(--header-h) + 40px) !important}}
+
+/* Unterseiten am Handy: Überschrift → Bild → Text & Buttons */
+@media (max-width:860px){
+  .page-hero__grid{display:flex !important;flex-direction:column;gap:0 !important}
+  .page-hero__grid > div:first-child{display:contents}
+  .page-hero .crumbs{order:1}.page-hero .kicker{order:2}.page-hero h1{order:3}
+  .page-hero__img{order:4 !important;margin:clamp(8px,3vw,16px) 0 clamp(28px,7vw,40px) !important;max-width:none !important}
+  .page-hero .lead{order:5}.page-hero .btns{order:6}
+}
+@media (max-width:860px){.page-hero .kicker,.page-hero .crumbs{align-self:flex-start}}
