@@ -32,7 +32,17 @@
     setMenu(!document.body.classList.contains('menu-open'));
   });
   if (mobile) mobile.addEventListener('click', function (e) {
-    if (e.target.closest('a')) setMenu(false);
+    var a = e.target.closest('a');
+    if (!a) return;
+    // Sprungziel auf derselben Seite: erst Menü schließen (Seite entsperren), dann hinscrollen
+    var url = new URL(a.getAttribute('href'), location.href);
+    var target = url.hash && url.pathname === location.pathname ? document.getElementById(url.hash.slice(1)) : null;
+    setMenu(false);
+    if (target) {
+      e.preventDefault();
+      history.pushState(null, '', url.hash);
+      requestAnimationFrame(function () { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    }
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
