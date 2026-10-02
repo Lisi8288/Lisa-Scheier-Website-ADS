@@ -133,8 +133,14 @@
     a.addEventListener('click', function () {
       var sel = document.getElementById('paket');
       if (sel) sel.value = a.getAttribute('data-paket');
+      else try { sessionStorage.setItem('ls_paket', a.getAttribute('data-paket')); } catch (e) {}
     });
   });
+  /* Auswahl von einer Unterseite (z. B. FINDbar.) im Formular übernehmen */
+  try {
+    var pre = sessionStorage.getItem('ls_paket'), preSel = document.getElementById('paket');
+    if (pre && preSel) { preSel.value = pre; sessionStorage.removeItem('ls_paket'); }
+  } catch (e) {}
 
   /* ---------- Kontaktformular (Web3Forms) ---------- */
   var form = document.getElementById('kontaktForm');
