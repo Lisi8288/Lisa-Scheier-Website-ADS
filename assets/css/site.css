@@ -1164,3 +1164,12 @@ a.testi__shot:hover .testi__screen img{transition-duration:12s}
 @media (prefers-reduced-motion:reduce){.preloader,.preloader *{animation:none;transition:none}}
 .preloader__tag{white-space:normal !important;width:100%;max-width:min(16em,100%) !important;overflow-wrap:break-word}
 .preloader > *{max-width:100%}
+
+/* Ergebnisse: drei Zahlen auf einen Blick */
+.stats{list-style:none;margin:0 auto clamp(40px,4.5vw,72px);padding:0;max-width:1100px;display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(201,154,91,.45);border-bottom:1px solid rgba(201,154,91,.45)}
+.stats li{padding:clamp(22px,2.4vw,36px) clamp(12px,2vw,28px);text-align:center}
+.stats li + li{border-left:1px solid rgba(201,154,91,.3)}
+.stats strong{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,3.4vw,3.6rem);line-height:1;color:#f0d3a3}
+.stats span{display:block;margin-top:12px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;line-height:1.7;color:rgba(230,214,193,.78)}
+@media (max-width:760px){.stats{grid-template-columns:1fr}.stats li + li{border-left:0;border-top:1px solid rgba(201,154,91,.3)}}
