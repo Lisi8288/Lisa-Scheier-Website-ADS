@@ -1150,3 +1150,17 @@ a.testi__shot:hover .testi__screen img{transition-duration:12s}
   /* Gesehen werden: halbes Gesicht sichtbar lassen */
   .problem__figure--photo img{transform:translateX(-14%) !important}
 }
+
+/* Ladeanimation Startseite (einmal pro Besuch) */
+.preloader{position:fixed;inset:0;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;
+  background:radial-gradient(ellipse 45% 40% at 50% 42%,rgba(150,80,30,.16),transparent 70%),#0a0908;transition:opacity .9s ease,visibility .9s ease}
+.preloader.is-hidden,.no-intro .preloader{opacity:0;visibility:hidden;pointer-events:none}
+.no-intro .preloader{display:none}
+.preloader__logo{width:clamp(120px,14vw,170px);height:auto;margin-bottom:10px;animation:plIn 1.1s cubic-bezier(.2,.7,.2,1) both}
+.preloader__name{font-family:var(--sans);font-weight:300;font-size:clamp(.8rem,1vw,.95rem);letter-spacing:.34em;text-transform:uppercase;color:#c99a5b;animation:plIn 1.1s .15s cubic-bezier(.2,.7,.2,1) both}
+.preloader__tag{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.7rem,3.6vw,3rem);line-height:1.15;color:#e6d6c1;max-width:16em;animation:plIn 1.1s .3s cubic-bezier(.2,.7,.2,1) both}
+.preloader__foot{margin-top:6px;font-family:var(--sans);font-weight:300;font-size:clamp(.72rem,.9vw,.85rem);letter-spacing:.2em;text-transform:uppercase;color:rgba(230,214,193,.6);animation:plIn 1.1s .45s cubic-bezier(.2,.7,.2,1) both}
+@keyframes plIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.preloader,.preloader *{animation:none;transition:none}}
+.preloader__tag{white-space:normal !important;width:100%;max-width:min(16em,100%) !important;overflow-wrap:break-word}
+.preloader > *{max-width:100%}

@@ -20,6 +20,15 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+
+  /* ---------- Ladeanimation ausblenden ---------- */
+  var pl = document.getElementById('preloader');
+  if (pl) {
+    var hidePl = function () { pl.classList.add('is-hidden'); setTimeout(function () { pl.remove(); }, 1000); };
+    if (document.documentElement.classList.contains('no-intro')) pl.remove();
+    else { window.addEventListener('load', function () { setTimeout(hidePl, 1100); }); setTimeout(hidePl, 4000); }
+  }
+
   /* ---------- Mobiles Menü ---------- */
   var burger = document.querySelector('.burger');
   var mobile = document.getElementById('mobile-menu');
