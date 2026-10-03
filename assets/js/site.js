@@ -136,7 +136,7 @@
       else try { sessionStorage.setItem('ls_paket', a.getAttribute('data-paket')); } catch (e) {}
     });
   });
-  /* Auswahl von einer Unterseite (z. B. FINDbar.) im Formular übernehmen */
+  /* Auswahl von einer Unterseite (z. B. SICHTbar.) im Formular übernehmen */
   try {
     var pre = sessionStorage.getItem('ls_paket'), preSel = document.getElementById('paket');
     if (pre && preSel) { preSel.value = pre; sessionStorage.removeItem('ls_paket'); }
