@@ -1202,3 +1202,10 @@ a.testi__shot:hover .testi__screen img{transition-duration:12s}
 /* Keine einzelnen Wörter in der letzten Zeile – überall */
 p,li,dd,blockquote{text-wrap:pretty}
 .lead--onerow{max-width:47em}
+
+/* Leitsatz-Band „Dein Erfolg ist unser Erfolg.“ zwischen Ergebnisse und Leistungen */
+.claim{position:relative;text-align:center;padding:clamp(56px,6vw,96px) var(--edge);overflow:hidden;isolation:isolate;
+  background:radial-gradient(ellipse 45% 120% at 50% 50%,rgba(150,52,42,.32),transparent 70%),linear-gradient(180deg,#0b0908,#140e0c 50%,#0b0908);
+  border-top:1px solid rgba(201,154,91,.22);border-bottom:1px solid rgba(201,154,91,.22)}
+.claim__text{margin:0;font-family:var(--sans);font-weight:300;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(1.6rem,4vw,3.6rem);line-height:1.2;color:#f1e8dd;text-wrap:balance}
+.claim__text em{font-family:var(--serif);font-style:italic;font-weight:300;text-transform:uppercase;letter-spacing:.02em;color:#e2bb82}
