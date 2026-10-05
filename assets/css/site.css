@@ -1253,3 +1253,5 @@ p,li,dd,blockquote{text-wrap:pretty}
 #wege .wege__list a:hover{color:#e2bb82}
 #wege .card strong{color:#f1e8dd;font-weight:400}
 .card--empfohlen{border-color:rgba(226,187,130,.55) !important}
+
+.facts--text{display:block}.facts--text p{max-width:52em;font-size:1.02rem;line-height:1.8}
