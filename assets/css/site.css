@@ -1255,3 +1255,4 @@ p,li,dd,blockquote{text-wrap:pretty}
 .card--empfohlen{border-color:rgba(226,187,130,.55) !important}
 
 .facts--text{display:block}.facts--text p{max-width:52em;font-size:1.02rem;line-height:1.8}
+.paket-bausteine{max-width:1100px;margin:clamp(24px,3vw,40px) auto 0}.paket-bausteine h3{font-size:1.6rem;font-style:italic;margin-bottom:18px}.paket-bausteine p{margin-top:18px}.paket-bausteine .findbar__list{columns:2;column-gap:40px}.paket-bausteine .findbar__list li{break-inside:avoid}@media (max-width:760px){.paket-bausteine .findbar__list{columns:1}}
