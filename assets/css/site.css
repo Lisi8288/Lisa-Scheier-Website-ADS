@@ -1295,3 +1295,10 @@ p,li,dd,blockquote{text-wrap:pretty}
                            mask-image:linear-gradient(90deg,transparent 22%,#000 42%,#000 66%,transparent 99%)}
 }
 @media (max-width:860px){.findbar::before{opacity:.42}}
+
+/* SICHTbar.-Karte: einzelnes Auge größer (Lisas Wunsch 09.10.) */
+@media (min-width:861px){
+  .findbar::before{width:105%;left:-26.6%;margin-top:-21.7%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 20%,#000 40%,#000 80%,transparent 100%);
+            mask-image:linear-gradient(90deg,transparent 20%,#000 40%,#000 80%,transparent 100%)}
+}
