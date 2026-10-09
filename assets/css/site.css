@@ -1266,3 +1266,32 @@ p,li,dd,blockquote{text-wrap:pretty}
 .rating--hero{display:flex;margin-top:22px}
 .rating--contact{display:flex;margin-top:26px}
 @media (max-width:560px){.rating{flex-wrap:wrap;gap:6px 10px;font-size:.86rem}}
+
+/* SICHTbar.-Karte: atmosphärisches Auge im Bordeaux-Kartenlayout (Lisas Entwurf 09.10.) */
+.findbar{overflow:hidden;isolation:isolate;
+  background:linear-gradient(160deg,rgba(92,52,50,.55),rgba(70,38,38,.6))}
+.findbar::before{content:"";position:absolute;z-index:-1;pointer-events:none;
+  width:110%;aspect-ratio:1677/938;left:-28%;top:0;margin-top:-21%;
+  background:url(../img/lisa-hero.webp) center/cover no-repeat;
+  filter:sepia(.35) saturate(1.15) hue-rotate(-8deg) brightness(.9);opacity:.85;
+  -webkit-mask-image:linear-gradient(90deg,transparent 18%,#000 34%,#000 80%,rgba(0,0,0,.55) 100%);
+          mask-image:linear-gradient(90deg,transparent 18%,#000 34%,#000 80%,rgba(0,0,0,.55) 100%)}
+.findbar > *{position:relative}
+.findbar__intro,.findbar__side{text-shadow:0 1px 18px rgba(30,12,12,.55)}
+@media (max-width:860px){
+  .findbar::before{width:190%;left:-95%;margin-top:-30%;opacity:.55;
+    -webkit-mask-image:linear-gradient(180deg,#000 0,#000 40%,transparent 75%);mask-image:linear-gradient(180deg,#000 0,#000 40%,transparent 75%)}
+}
+/* Feinjustierung Auge: kleiner, mittiger, mehr Bordeaux, weiche Ränder */
+@media (min-width:861px){
+  .findbar::before{width:82%;left:-8%;margin-top:-14.5%;opacity:.82;
+    filter:sepia(.3) saturate(1.1) hue-rotate(-10deg) brightness(.78);
+    box-shadow:inset 0 0 0 2000px rgba(96,36,40,.26);
+    -webkit-mask-image:radial-gradient(ellipse 62% 78% at 64% 52%,#000 45%,transparent 100%);
+            mask-image:radial-gradient(ellipse 62% 78% at 64% 52%,#000 45%,transparent 100%)}
+}
+@media (min-width:861px){
+  .findbar::before{-webkit-mask-image:linear-gradient(90deg,transparent 22%,#000 42%,#000 66%,transparent 99%);
+                           mask-image:linear-gradient(90deg,transparent 22%,#000 42%,#000 66%,transparent 99%)}
+}
+@media (max-width:860px){.findbar::before{opacity:.42}}
