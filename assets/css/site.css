@@ -1358,3 +1358,18 @@ p,li,dd,blockquote{text-wrap:pretty}
 .booking__cal{position:relative}
 .booking__cal::before{content:"Kalender wird geladen …";position:absolute;top:120px;left:0;right:0;text-align:center;font-size:.8rem;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-3)}
 .booking__cal iframe{position:relative;z-index:1}
+
+/* „Weitere Leistungen“: SICHTbar.-Kachel ohne Foto (Mauve + Goldlicht wie die SICHTbar.-Karte) */
+.more__thumb{position:relative;display:grid;place-items:center;width:120px;aspect-ratio:3/2;border-radius:10px;overflow:hidden;
+  background:radial-gradient(ellipse 80% 70% at 50% -10%,rgba(255,214,160,.55),rgba(255,190,120,.12) 55%,transparent 75%),linear-gradient(160deg,#8a5e5c 0%,#704a4a 50%,#5a3a3c 100%);
+  font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.05rem;color:#f6e7d6;letter-spacing:.01em}
+.more__thumb::after{content:"";position:absolute;left:22%;right:22%;bottom:30%;height:1px;
+  background:linear-gradient(90deg,transparent,#f0d0a0,transparent);filter:drop-shadow(0 0 3px rgba(255,214,160,.9))}
+@media (max-width:720px){.more__thumb{width:88px;font-size:.85rem}}
+
+/* Fragen auf den Leistungsseiten: Frage ist eine echte Überschrift (h3) im Aufklapp-Element */
+.faq__q{display:inline;margin:0;font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit}
+.faq--page .faq__answer .textlink{white-space:nowrap}
+/* SICHTbar.-Karte Startseite: Festpreis */
+.findbar__price{margin:0 0 14px}
+.findbar__price strong{font-family:var(--serif);font-weight:300;font-size:2.6rem;line-height:1;color:#f0c894}
