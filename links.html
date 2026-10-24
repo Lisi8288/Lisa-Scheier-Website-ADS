@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lisa Scheier · Links</title>
+<meta name="description" content="Google Ads, Websites & Sichtbarkeit für Selbstständige. Alle Angebote von Lisa Scheier auf einen Blick.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0b0908">
+<link rel="icon" href="assets/img/logo.png">
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/cormorant-garamond-v21-latin-300.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url(assets/fonts/cormorant-garamond-v21-latin-300italic.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:200;font-display:swap;src:url(assets/fonts/jost-v20-latin-200.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/jost-v20-latin-300.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/jost-v20-latin-regular.woff2) format('woff2')}
+@font-face{font-family:'Script';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/allura.woff2) format('woff2')}
+:root{
+  --bg:#0b0908;--ink:#e6d6c1;--ink-2:rgba(230,214,193,.78);--ink-3:rgba(230,214,193,.55);
+  --brass:#c9a063;--brass-soft:#ead3ad;--line:rgba(201,160,99,.2);--line-strong:rgba(201,160,99,.42);
+  --taupe:linear-gradient(150deg,#4d3536,#3f2b2c 55%,#2a1d1d);
+  --glass:linear-gradient(150deg,rgba(90,62,46,.30),rgba(26,19,15,.62) 60%,rgba(60,30,26,.26));
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost','Helvetica Neue',Arial,sans-serif;--script:'Script',cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.55;overflow-x:hidden;
+  background-image:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(201,160,99,.13),transparent 70%),radial-gradient(ellipse 70% 30% at 50% 100%,rgba(77,53,54,.35),transparent 70%);min-height:100vh}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.page{max-width:520px;margin:0 auto;padding:34px 0 40px}
+.pad{padding:0 20px}
+
+/* Kopf */
+.brand{text-align:center}
+.brand img{width:96px;height:96px;margin:0 auto 14px;border-radius:50%;box-shadow:0 0 0 1px var(--line),0 10px 40px rgba(201,160,99,.12)}
+.brand__name{font-family:var(--serif);font-size:30px;letter-spacing:.14em;text-transform:uppercase;font-weight:300}
+.brand__sub{font-size:10.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--brass);margin-top:4px}
+
+/* Galerie */
+.count{font-family:var(--serif);font-style:italic;font-size:24px;text-align:center;margin:26px 0 14px;color:var(--ink-2)}
+.count b{font-weight:300;font-style:normal;color:var(--ink)}
+.stage{perspective:1100px}
+.track{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:14px 0 30px}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 74%;max-width:360px;scroll-snap-align:center;transform-style:preserve-3d;will-change:transform;transition:transform .08s linear}
+.slide+.slide{margin-left:-9%}
+.slide:first-child{margin-left:13%}.slide:last-child{margin-right:13%}
+@media(min-width:520px){.slide:first-child{margin-left:80px}.slide:last-child{margin-right:80px}}
+.card{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:#17120f;
+  box-shadow:0 0 0 1px var(--line),0 24px 50px rgba(0,0,0,.55)}
+.card img{width:100%;height:100%;object-fit:cover}
+.card--scroll img{height:auto;object-fit:initial;animation:roll 16s ease-in-out infinite alternate;animation-play-state:paused}
+.slide.is-active .card--scroll img{animation-play-state:running}
+@keyframes roll{0%,8%{transform:translateY(0)}92%,100%{transform:translateY(calc(-100% + var(--h,400px)))}}
+.card__bar{position:absolute;top:0;left:0;right:0;height:26px;background:rgba(11,9,8,.82);backdrop-filter:blur(6px);display:flex;align-items:center;gap:5px;padding:0 12px;z-index:2}
+.card__bar i{width:6px;height:6px;border-radius:50%;background:var(--line-strong)}
+.card__bar span{margin-left:8px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.card--scroll img{margin-top:26px}
+.card__label{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;z-index:2;
+  background:linear-gradient(transparent,rgba(11,9,8,.92));font-family:var(--serif);font-size:22px;line-height:1.15}
+.card__label em{font-style:italic;color:var(--brass-soft)}
+.card__label small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass);margin-bottom:5px}
+.progress{width:190px;height:1px;background:var(--line);margin:0 auto;position:relative}
+.progress span{position:absolute;top:-1px;height:3px;border-radius:2px;background:var(--brass);width:30px;left:0;transition:left .2s}
+.swipe{text-align:center;font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--ink-3);margin-top:20px}
+
+/* Hero-Text */
+.kicker{text-align:center;font-size:12px;letter-spacing:.08em;color:var(--ink-3);margin:44px 0 12px}
+h1{text-align:center;font-weight:200;font-size:clamp(30px,8.4vw,40px);line-height:1.1;letter-spacing:-.005em}
+h1 .s{font-family:var(--script);font-size:1.9em;line-height:.6;color:var(--brass-soft);vertical-align:-.12em;margin-right:.02em}
+h1 em{display:block;font-family:var(--serif);font-style:italic;font-weight:300;color:var(--ink-2);margin-top:6px}
+.lead{text-align:center;color:var(--ink-2);font-size:15.5px;margin:16px auto 0;max-width:330px}
+.btn{display:flex;align-items:center;justify-content:center;gap:14px;height:62px;border-radius:999px;margin:28px 0 10px;
+  background:linear-gradient(180deg,#e9d6b5,#c9a063);color:#1a120d;font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;font-weight:400;
+  box-shadow:0 14px 36px rgba(201,160,99,.22)}
+.btn svg{width:18px;height:18px}
+.hint{text-align:center;font-size:13px;color:var(--ink-3)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin:38px 0 0;text-align:center}
+.stats div{padding:0 6px}
+.stats div+div{border-left:1px solid var(--line)}
+.stats b{display:block;font-family:var(--serif);font-weight:300;font-size:40px;line-height:1}
+.stats span{display:block;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);margin-top:8px;line-height:1.5}
+
+/* Angebote */
+.eyebrow{text-align:center;font-size:10.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--brass);margin:60px 0 10px}
+h2{text-align:center;font-family:var(--serif);font-weight:300;font-size:34px;line-height:1.1}
+h2 em{display:block;font-style:italic;color:var(--ink-2)}
+.sub{text-align:center;color:var(--ink-3);font-size:14px;margin-top:8px}
+.offers{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin-top:34px}
+.offer{position:relative;display:flex;align-items:center;gap:14px;padding:16px 14px 16px 16px;border-radius:22px;
+  background:var(--glass);box-shadow:inset 0 0 0 1px var(--line),0 18px 40px rgba(0,0,0,.4)}
+.offer--taupe{background:var(--taupe)}
+.offer--mauve{background:radial-gradient(ellipse 90% 70% at 50% -10%,rgba(234,211,173,.35),transparent 60%),linear-gradient(160deg,#5a3c42,#3a2629)}
+.offer--light{background:linear-gradient(150deg,#e9dccb,#d8c6b0);color:#1a120d;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.offer__img{flex:0 0 78px;height:88px;border-radius:14px;overflow:hidden;background:#17120f}
+.offer__img img{width:100%;height:100%;object-fit:cover}
+.offer__body{flex:1;min-width:0}
+.offer__tag{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);margin-bottom:3px}
+.offer--light .offer__tag{color:#8a6535}
+.offer__title{font-family:var(--serif);font-size:25px;line-height:1.08;hyphens:manual}
+.offer__title em{font-style:italic;color:var(--brass-soft)}
+.offer--light .offer__title em{color:#7a5634}
+.offer__text{font-size:13px;line-height:1.45;color:var(--ink-2);margin-top:5px}
+.offer--light .offer__text{color:rgba(26,18,13,.72)}
+.offer__go{flex:0 0 40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#1a120d}
+.offer--light .offer__go{background:transparent;box-shadow:inset 0 0 0 1px rgba(26,18,13,.3)}
+.offer__go svg{width:16px;height:16px}
+.badge{position:absolute;top:-11px;right:18px;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;padding:5px 12px;border-radius:999px;
+  background:var(--ink);color:#1a120d;font-weight:400}
+.badge--gold{background:var(--brass)}
+.badge--dark{background:#1a120d;color:var(--ink)}
+
+/* Kontakt */
+.contact{margin-top:54px;padding:28px 20px;border-radius:22px;background:var(--glass);box-shadow:inset 0 0 0 1px var(--line);text-align:center}
+.contact h3{font-family:var(--serif);font-weight:300;font-size:30px;line-height:1.15}
+.contact h3 em{font-style:italic;color:var(--brass-soft)}
+.contact p{color:var(--ink-3);font-size:14px;margin-top:4px}
+.pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line-strong);font-size:13px}
+.pill svg{width:16px;height:16px;color:var(--brass)}
+footer{text-align:center;margin-top:44px}
+footer img{width:54px;height:54px;border-radius:50%;margin:0 auto 12px;opacity:.85}
+footer nav{font-size:12px;color:var(--ink-3)}
+footer nav a{border-bottom:1px solid var(--line);margin:0 6px}
+footer small{display:block;font-size:11.5px;color:var(--ink-3);margin-top:10px}
+@media(prefers-reduced-motion:reduce){.card--scroll img{animation:none}.slide{transition:none}}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="brand pad">
+    <img src="assets/img/logo.png" alt="Logo Lisa Scheier">
+    <div class="brand__name">Lisa Scheier</div>
+    <div class="brand__sub">Google Ads &amp; Websites</div>
+  </header>
+
+  <div class="count" aria-live="polite"><b id="cur">01</b>/<span id="tot">05</span></div>
+  <div class="stage">
+    <div class="track" id="track">
+      <div class="slide"><div class="card card--scroll"><div class="card__bar"><i></i><i></i><i></i><span>Website &amp; Google Ads</span></div><img src="assets/img/projekt-lisascheier.webp" alt="Website von Lisa Scheier" loading="lazy"><div class="card__label"><small>Projekt</small>Meine eigene <em>Website</em></div></div></div>
+      <div class="slide"><div class="card"><img src="assets/img/lisa-portrait-2.webp" alt="Lisa Scheier"><div class="card__label"><small>Hi, ich bin Lisa</small>Ich sorge dafür, dass <em>man dich findet.</em></div></div></div>
+      <div class="slide"><div class="card card--scroll"><div class="card__bar"><i></i><i></i><i></i><span>Website &amp; Profil</span></div><img src="assets/img/projekt-christine.webp" alt="Website-Projekt einer Harfenistin" loading="lazy"><div class="card__label"><small>Projekt</small>Website für eine <em>Harfenistin</em></div></div></div>
+      <div class="slide"><div class="card card--scroll"><div class="card__bar"><i></i><i></i><i></i><span>Website-Funnel &amp; Ads</span></div><img src="assets/img/projekt-ursula.webp" alt="Website-Funnel-Projekt" loading="lazy"><div class="card__label"><small>Projekt</small>Website-Funnel <em>&amp; Google Ads</em></div></div></div>
+      <div class="slide"><div class="card"><img src="assets/img/projekt-martina.webp" alt="Landingpage-Projekt" loading="lazy" style="object-position:top"><div class="card__bar" style="top:0"><i></i><i></i><i></i><span>Funnel &amp; Google Ads</span></div><div class="card__label"><small>200 Leads in 4 Wochen</small>Funnel <em>&amp; Google Ads</em></div></div></div>
+    </div>
+  </div>
+  <div class="progress"><span id="bar"></span></div>
+  <div class="swipe">&larr;&nbsp;&nbsp;Wischen&nbsp;&nbsp;&rarr;</div>
+
+  <section class="pad">
+    <p class="kicker">Google Ads &amp; Sichtbarkeit für Selbstständige</p>
+    <h1><span class="s">S</span>chade, dass dich keiner findet. <em>Lass uns das ändern.</em></h1>
+    <p class="lead">Mehr Anfragen über Google. Eine Website, die Vertrauen aufbaut. Ohne Technik-Stress.</p>
+    <a class="btn" href="https://lisascheier.de/erstgespraech.html">Erstgespräch buchen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+    <p class="hint">30 Minuten, kostenlos. Wir schauen, was dir gerade fehlt.</p>
+
+    <div class="stats">
+      <div><b>200</b><span>Leads in<br>4 Wochen</span></div>
+      <div><b>79</b><span>Anfragen nur<br>über Google Ads</span></div>
+      <div><b>2</b><span>Wochen bis zur<br>ersten Anfrage</span></div>
+    </div>
+
+    <p class="eyebrow">Meine Angebote</p>
+    <h2>Hier startet deine <em>Sichtbarkeit.</em></h2>
+    <p class="sub">Vom kleinen Einstieg bis zur Rundum-Betreuung.</p>
+
+    <div class="offers">
+      <a class="offer offer--mauve" href="https://lisascheier.de/sichtbar.html">
+        <span class="badge badge--gold">Ideal zum Start · 149 €</span>
+        <div class="offer__body">
+          <div class="offer__tag">Sichtbarkeitsanalyse</div>
+          <div class="offer__title">SICHT<em>bar.</em></div>
+          <div class="offer__text">Deine drei größten Hebel, eine klare Empfehlung und eine persönliche Besprechung.</div>
+        </div>
+        <span class="offer__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="offer" href="https://lisascheier.de/google-ads.html">
+        <span class="badge">Mehr Anfragen</span>
+        <div class="offer__img"><img src="assets/img/leistung-google-ads.webp" alt="" loading="lazy"></div>
+        <div class="offer__body">
+          <div class="offer__tag">1:1 Betreuung · monatlich</div>
+          <div class="offer__title">Google <em>Ads</em></div>
+          <div class="offer__text">Ich baue und betreue deine Kampagnen. Tracking inklusive.</div>
+        </div>
+        <span class="offer__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="offer offer--taupe" href="https://lisascheier.de/websites-landingpages.html">
+        <span class="badge">Sehr beliebt</span>
+        <div class="offer__img"><img src="assets/img/leistung-websites.webp" alt="" loading="lazy"></div>
+        <div class="offer__body">
+          <div class="offer__tag">Done for you</div>
+          <div class="offer__title">Websites <em>&amp; Landingpages</em></div>
+          <div class="offer__text">Schön ist nicht genug. Deine Seite soll Anfragen bringen.</div>
+        </div>
+        <span class="offer__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="offer" href="https://lisascheier.de/google-unternehmensprofil.html">
+        <span class="badge">Google Maps</span>
+        <div class="offer__img"><img src="assets/img/leistung-unternehmensprofil.webp" alt="" loading="lazy"></div>
+        <div class="offer__body">
+          <div class="offer__tag">Einrichten &amp; optimieren</div>
+          <div class="offer__title">Google <em>Unternehmens&shy;profil</em></div>
+          <div class="offer__text">Ein starker erster Eindruck direkt in der Google-Suche und auf Maps.</div>
+        </div>
+        <span class="offer__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="offer offer--taupe" href="https://lisascheier.de/conversion-tracking.html">
+        <span class="badge">Bei Ads inklusive</span>
+        <div class="offer__img"><img src="assets/img/leistung-tracking.webp" alt="" loading="lazy"></div>
+        <div class="offer__body">
+          <div class="offer__tag">Messen statt raten</div>
+          <div class="offer__title">Conversion <em>Tracking</em></div>
+          <div class="offer__text">Du siehst, welche Klicks zu Anfragen werden und was dein Budget wirklich bringt.</div>
+        </div>
+        <span class="offer__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="offer offer--light" href="https://lisascheier.de/google-ads.html#ads-check">
+        <span class="badge badge--dark">Schon Ads? · 149 €</span>
+        <div class="offer__body">
+          <div class="offer__tag">Für laufende Kampagnen</div>
+          <div class="offer__title">Ads-<em>Check</em></div>
+          <div class="offer__text">Ich prüfe dein Konto und zeige dir, wo Budget verloren geht.</div>
+        </div>
+        <span class="offer__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+
+    <div class="contact">
+      <h3>Noch Fragen? <em>Schreib mir.</em></h3>
+      <p>Ich melde mich innerhalb von 24 Stunden.</p>
+      <div class="pills">
+        <a class="pill" href="mailto:info@lisascheier.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>E-Mail</a>
+        <a class="pill" href="https://lisascheier.de/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>Website</a>
+      </div>
+    </div>
+
+    <footer>
+      <img src="assets/img/logo.png" alt="">
+      <nav><a href="https://lisascheier.de/impressum.html">Impressum</a>·<a href="https://lisascheier.de/datenschutz.html">Datenschutz</a></nav>
+      <small>© 2026 Lisa Scheier</small>
+    </footer>
+  </section>
+</main>
+<script>
+(function(){
+  var track=document.getElementById('track'),slides=[].slice.call(track.children),cur=document.getElementById('cur'),bar=document.getElementById('bar');
+  var n=slides.length;document.getElementById('tot').textContent=String(n).padStart(2,'0');
+  function update(){
+    var mid=track.scrollLeft+track.clientWidth/2,best=0,bd=1e9;
+    slides.forEach(function(s,i){
+      var c=s.offsetLeft+s.offsetWidth/2,d=(c-mid)/s.offsetWidth;
+      if(Math.abs(d)<bd){bd=Math.abs(d);best=i}
+      var k=Math.max(-1.4,Math.min(1.4,d));
+      s.style.transform='rotateY('+(-k*28)+'deg) scale('+(1-Math.abs(k)*.12)+') translateZ('+(-Math.abs(k)*60)+'px)';
+      s.style.zIndex=10-Math.round(Math.abs(d)*3);
+    });
+    slides.forEach(function(s,i){s.classList.toggle('is-active',i===best)});
+    cur.textContent=String(best+1).padStart(2,'0');
+    bar.style.left=(best/(n-1))*(190-30)+'px';
+  }
+  function sizes(){slides.forEach(function(s){var c=s.querySelector('.card--scroll');if(c)c.style.setProperty('--h',(c.clientHeight-26)+'px')});update()}
+  track.addEventListener('scroll',function(){requestAnimationFrame(update)},{passive:true});
+  window.addEventListener('resize',sizes);window.addEventListener('load',sizes);sizes();
+})();
+</script>
+</body>
+</html>
