@@ -53,6 +53,14 @@ img{display:block;max-width:100%}
 .card--scroll img{height:auto;object-fit:initial;animation:roll 16s ease-in-out infinite alternate;animation-play-state:paused}
 .slide.is-active .card--scroll img{animation-play-state:running}
 @keyframes roll{0%,8%{transform:translateY(0)}92%,100%{transform:translateY(calc(-100% + var(--h,400px)))}}
+.card--ads{background:radial-gradient(ellipse 90% 60% at 50% -5%,rgba(234,211,173,.42),transparent 60%),linear-gradient(165deg,#5a3c42,#2a1b1e 75%)}
+.ads{position:absolute;inset:26px 0 0;display:flex;flex-direction:column;align-items:center;padding-top:10%;text-align:center}
+.card--ads .card__label--quote{background:none;padding-top:20px}
+.ads__k{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass)}
+.ads__t{font-family:var(--serif);font-size:30px;line-height:1.1;margin-top:8px}
+.ads__t em{font-style:italic;color:var(--brass-soft)}
+.ads__n{font-family:var(--serif);font-weight:300;font-size:72px;line-height:1;color:var(--brass-soft);margin-top:12px;text-shadow:0 0 30px rgba(234,211,173,.35)}
+.ads__s{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2);margin-top:6px;padding-bottom:12px;border-bottom:1px solid var(--line-strong)}
 .card__bar{position:absolute;top:0;left:0;right:0;height:26px;background:rgba(11,9,8,.82);backdrop-filter:blur(6px);display:flex;align-items:center;gap:5px;padding:0 12px;z-index:2}
 .card__bar i{width:6px;height:6px;border-radius:50%;background:var(--line-strong)}
 .card__bar span{margin-left:8px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
@@ -115,8 +123,6 @@ h2 em{display:block;font-style:italic;color:var(--ink-2)}
 .badge--gold{background:var(--brass)}
 .badge--dark{background:#1a120d;color:var(--ink)}
 
-/* Kundenstimme */
-.voice{margin-top:54px;padding:30px 22px 26px;border-radius:22px;text-align:center;
   background:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(234,211,173,.30),transparent 60%),var(--taupe);box-shadow:inset 0 0 0 1px var(--line),0 18px 40px rgba(0,0,0,.4)}
 .voice__k{font-size:10.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--brass)}
 .voice blockquote{font-family:var(--serif);font-style:italic;font-weight:300;font-size:30px;line-height:1.15;margin:14px 0 12px}
@@ -125,7 +131,7 @@ h2 em{display:block;font-style:italic;color:var(--ink-2)}
 .voice__res{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);line-height:1.7}
 .voice__res b{display:block;font-family:var(--serif);font-weight:300;font-size:44px;letter-spacing:0;line-height:1;color:var(--brass-soft);margin-bottom:6px}
 /* Kontakt */
-.contact{margin-top:28px;padding:28px 20px;border-radius:22px;background:var(--glass);box-shadow:inset 0 0 0 1px var(--line);text-align:center}
+.contact{margin-top:54px;padding:28px 20px;border-radius:22px;background:var(--glass);box-shadow:inset 0 0 0 1px var(--line);text-align:center}
 .contact h3{font-family:var(--serif);font-weight:300;font-size:30px;line-height:1.15}
 .contact h3 em{font-style:italic;color:var(--brass-soft)}
 .contact p{color:var(--ink-3);font-size:14px;margin-top:4px}
@@ -149,7 +155,7 @@ footer small{display:block;font-size:11.5px;color:var(--ink-3);margin-top:10px}
     <div class="brand__sub">Google Ads &amp; Websites</div>
   </header>
 
-  <div class="count" aria-live="polite"><b id="cur">01</b>/<span id="tot">05</span></div>
+  <div class="count" aria-live="polite"><b id="cur">01</b>/<span id="tot">06</span></div>
   <div class="stage">
     <div class="track" id="track">
       <div class="slide"><div class="card"><img src="assets/img/lisa-portrait-2.webp" alt="Lisa Scheier"><div class="card__label"><small>Hi, ich bin Lisa</small>Ich sorge dafür, dass <em>man dich findet.</em></div></div></div>
@@ -157,6 +163,7 @@ footer small{display:block;font-size:11.5px;color:var(--ink-3);margin-top:10px}
       <div class="slide"><div class="card card--scroll"><div class="card__bar"><i></i><i></i><i></i><span>Website &amp; Profil</span></div><img src="assets/img/projekt-christine.webp" alt="Website-Projekt einer Harfenistin" loading="lazy"><div class="card__label card__label--quote"><small>Christine · Harfenistin</small><q>Die Seite ist genau so geworden, wie ich es wollte.</q></div></div></div>
       <div class="slide"><div class="card card--scroll"><div class="card__bar"><i></i><i></i><i></i><span>Website-Funnel &amp; Ads</span></div><img src="assets/img/projekt-ursula.webp" alt="Website-Funnel-Projekt" loading="lazy"><div class="card__label card__label--quote"><small>Ursula · Website &amp; Ads</small><q>Die Zusammenarbeit mit ihr war eine der besten Entscheidungen für mich und mein Business!</q></div></div></div>
       <div class="slide"><div class="card"><img src="assets/img/projekt-martina.webp" alt="Landingpage-Projekt" loading="lazy" style="object-position:top"><div class="card__bar" style="top:0"><i></i><i></i><i></i><span>Funnel &amp; Google Ads</span></div><div class="card__label card__label--quote"><small>Martina · 200 Leads</small><q>Ich bekomme täglich qualifizierte Leads.</q></div></div></div>
+      <div class="slide"><div class="card card--ads"><div class="card__bar"><i></i><i></i><i></i><span>Nur Google Ads</span></div><div class="ads"><span class="ads__k">Ohne neue Website</span><span class="ads__t">Nur <em>Google Ads</em></span><span class="ads__n">79</span><span class="ads__s">Anfragen in 4,5 Monaten</span></div><div class="card__label card__label--quote"><small>Jessica · Ayurveda-Massage</small><q>Die Werbung hat sich gelohnt.</q></div></div></div>
     </div>
   </div>
   <div class="progress"><span id="bar"></span></div>
@@ -240,12 +247,6 @@ footer small{display:block;font-size:11.5px;color:var(--ink-3);margin-top:10px}
       </a>
     </div>
 
-    <figure class="voice">
-      <p class="voice__k">Was Kunden sagen</p>
-      <blockquote>„Die Werbung hat sich gelohnt.“</blockquote>
-      <figcaption><strong>Jessica Beschmann</strong> · Ayurveda-Massage</figcaption>
-      <p class="voice__res"><b>79</b> Anfragen in 4,5 Monaten<br>nur über Google Ads</p>
-    </figure>
 
     <div class="contact">
       <h3>Noch Fragen? <em>Schreib mir.</em></h3>
