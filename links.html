@@ -111,8 +111,17 @@ h2 em{display:block;font-style:italic;color:var(--ink-2)}
 .badge--gold{background:var(--brass)}
 .badge--dark{background:#1a120d;color:var(--ink)}
 
+/* Kundenstimme */
+.voice{margin-top:54px;padding:30px 22px 26px;border-radius:22px;text-align:center;
+  background:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(234,211,173,.30),transparent 60%),var(--taupe);box-shadow:inset 0 0 0 1px var(--line),0 18px 40px rgba(0,0,0,.4)}
+.voice__k{font-size:10.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--brass)}
+.voice blockquote{font-family:var(--serif);font-style:italic;font-weight:300;font-size:30px;line-height:1.15;margin:14px 0 12px}
+.voice figcaption{font-size:12px;letter-spacing:.06em;color:var(--ink-2)}
+.voice figcaption strong{font-weight:400;color:var(--ink)}
+.voice__res{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);line-height:1.7}
+.voice__res b{display:block;font-family:var(--serif);font-weight:300;font-size:44px;letter-spacing:0;line-height:1;color:var(--brass-soft);margin-bottom:6px}
 /* Kontakt */
-.contact{margin-top:54px;padding:28px 20px;border-radius:22px;background:var(--glass);box-shadow:inset 0 0 0 1px var(--line);text-align:center}
+.contact{margin-top:28px;padding:28px 20px;border-radius:22px;background:var(--glass);box-shadow:inset 0 0 0 1px var(--line);text-align:center}
 .contact h3{font-family:var(--serif);font-weight:300;font-size:30px;line-height:1.15}
 .contact h3 em{font-style:italic;color:var(--brass-soft)}
 .contact p{color:var(--ink-3);font-size:14px;margin-top:4px}
@@ -226,6 +235,13 @@ footer small{display:block;font-size:11.5px;color:var(--ink-3);margin-top:10px}
         <span class="offer__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
+
+    <figure class="voice">
+      <p class="voice__k">Was Kunden sagen</p>
+      <blockquote>„Die Werbung hat sich gelohnt.“</blockquote>
+      <figcaption><strong>Jessica Beschmann</strong> · Ayurveda-Massage</figcaption>
+      <p class="voice__res"><b>79</b> Anfragen in 4,5 Monaten<br>nur über Google Ads</p>
+    </figure>
 
     <div class="contact">
       <h3>Noch Fragen? <em>Schreib mir.</em></h3>

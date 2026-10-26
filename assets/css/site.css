@@ -1373,3 +1373,12 @@ p,li,dd,blockquote{text-wrap:pretty}
 /* SICHTbar.-Karte Startseite: Festpreis */
 .findbar__price{margin:0 0 14px}
 .findbar__price strong{font-family:var(--serif);font-weight:300;font-size:2.6rem;line-height:1;color:#f0c894}
+/* Kundenstimmen 2x2 + Jessica-Karte ohne Website (26.10.2026) */
+.testis--4{max-width:1240px}
+.testi__screen--ads{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;
+  background:radial-gradient(ellipse 80% 70% at 50% -10%,rgba(240,211,163,.42),transparent 62%),linear-gradient(160deg,#5a3c42,#2e1f22)}
+.testi__screen--ads::after{content:"";position:absolute;left:50%;top:62%;width:42%;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,#f0d3a3,transparent);box-shadow:0 0 12px rgba(240,211,163,.6)}
+.testi__ads-k{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:#f0d3a3}
+.testi__ads-t{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,3vw,2.8rem);line-height:1.05;color:#f1e8dd}
+.testi__ads-t em{font-style:italic;color:#f0d3a3}
+.testi__ads-s{margin-top:22px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(241,232,221,.7)}
